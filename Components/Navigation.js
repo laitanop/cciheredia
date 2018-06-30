@@ -18,7 +18,7 @@ const styles = {
    
   },
   menuButton: {
-    marginLeft: -12,
+    marginLeft: 100,
     marginRight: 20,
   },
   colorBar: {
@@ -31,6 +31,7 @@ const styles = {
     lineHeigth: '30px',
     // color:  'rgba(0, 0, 0, 0.9)',
     color:  '#fff',
+    paddingTop: '200px',
 
   },
   buttons: {
@@ -46,7 +47,17 @@ const styles = {
       color: '#030266',
       fontWeight: '500',
     },
-  }
+  },
+  img: {
+    backgroundImage: 'url("/static/ccilogo7.png")',
+    backgroundSize: '75%',
+    width:'82px',
+height:'82px', 
+    backgroundRepeat:' no-repeat',
+    '&:hover': {
+      backgroundImage: 'url("/static/Webp.net-gifmaker.gif")',
+    },
+  },
 };
 
 function Navigation(props) {
@@ -55,14 +66,13 @@ function Navigation(props) {
     <div className={classes.root}>
       <AppBar position="static" className={classes.colorBar}>
         <Toolbar>
-          {/* <IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
-            <MenuIcon />
-          </IconButton> */}
        
-
+        <IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
+          <div className={classes.img} />
+          </IconButton>
+        
           <Typography variant="title" color="inherit" className={classes.flex}>
-          {/* <img src="../static/ccilogo.png" alt="CCI" height="52" width="152" />  */}
-          <img src="../static/ccilogo7.png" alt="CCI" height="42" width="42" /> 
+    
           <span className={classes.logotext}> &nbsp;Centro Cristiano Internacional</span>
           </Typography>
          
@@ -74,6 +84,7 @@ function Navigation(props) {
      
         </Toolbar>
       </AppBar>
+     
     </div>
   );
 }
