@@ -11,6 +11,8 @@ import { withStyles } from '@material-ui/core/styles';
 import withRoot from '../src/withRoot';
 import Navigation from '../Components/Navigation';
 import Layout from '../Components/Layout';
+import HomeSection1 from '../Components/HomeSection1';
+import Banner from '../Components/Banner';
 
 const styles = theme => ({
   root: {
@@ -42,7 +44,12 @@ class Index extends React.Component {
 
     return (
       <Layout>
-        <Navigation />
+        {/* <Navigation /> */}
+        {/* 
+         */}
+              <HomeSection1 />
+         <Banner />
+    
     
       </Layout>
       // <div className={classes.root}>
