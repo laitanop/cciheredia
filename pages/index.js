@@ -12,6 +12,7 @@ import withRoot from '../src/withRoot';
 import Navigation from '../Components/Navigation';
 import Layout from '../Components/Layout';
 import HomeSection1 from '../Components/HomeSection1';
+import HomeSection2 from '../Components/HomeSection2';
 import Banner from '../Components/Banner';
 
 const styles = theme => ({
@@ -47,7 +48,9 @@ class Index extends React.Component {
         {/* <Navigation /> */}
         {/* 
          */}
+         <HomeSection2 />
               <HomeSection1 />
+
          <Banner />
     
     
