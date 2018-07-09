@@ -9,6 +9,7 @@
     "next": "latest",
     "prop-types": "latest",
     "react": "latest",
+    "react-animate-on-scroll": "^2.1.5",
     "react-dom": "latest",
     "react-jss": "latest"
   },

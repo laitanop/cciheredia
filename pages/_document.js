@@ -26,6 +26,8 @@ class MyDocument extends Document {
 
 					<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" />
 					<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous" />
+					<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
+
 				</Head>
 				<body>
 					<Main />

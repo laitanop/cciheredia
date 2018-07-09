@@ -4,6 +4,8 @@ import { withStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
+import ScrollAnimation from "react-animate-on-scroll";
+
 
 
 const styles = theme => ({
@@ -23,7 +25,7 @@ const styles = theme => ({
   
 	},
 	icon: {
-		color: "#039BE5",
+		color: "#0C98E8",
 	},
 	// paperLeft: {
 	// 	padding: theme.spacing.unit * 2,
@@ -83,7 +85,11 @@ function HomeSection2(props) {
 	return (
 		<div className={classes.root}>
 			<Typography className={classes.Title} variant="headline" component="h3">
-         Bienvenidos <br /> al Centro Cristiano Interancional Heredia
+				<ScrollAnimation animateIn="fadeInUp">
+			Bienvenidos
+				</ScrollAnimation> <br /><ScrollAnimation animateIn="fadeInUp">
+				al Centro Cristiano Interancional Heredia
+				</ScrollAnimation>
 			</Typography>
 			
 		
@@ -109,9 +115,14 @@ function HomeSection2(props) {
 					</Paper>
 				</Grid>
 				<Grid item xs={12} sm={6}>
-						
+					<Typography className={classes.paperParagraph}>
+				Ama al Señor tu Dios con todo tu corazón y con toda tu alma y con todas tus fuerzas. <br />
+				Deuteronomio 6:5
+					</Typography>
+		 <br />	<img src="../static/Untitled (36).png" alt="CCI" height="300" width="400" />
+
 				</Grid>
-      
+
 			</Grid>
 
 	

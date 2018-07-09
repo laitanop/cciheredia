@@ -22,7 +22,7 @@ const styles = {
 		marginRight: 20,
 	},
 	colorBar: {
-		background: "linear-gradient(45deg, #0277BD 1%, #039BE5 30%, #fff 90%)",
+		background: "linear-gradient(45deg, #0D67FF 1%, #0C98E8 30%,#00E5FF 90%)",
 	},
 	logotext: {
 		fontFamily: "Nunito Sans, sans-serif",
@@ -39,7 +39,7 @@ const styles = {
 		fontSize: "14px",
 		fontWeight: "300",
 		lineHeigth: "21.8182px",
-		color:  "#01579B",
+		color:  "#fff",
 		// color:  'rgba(0, 0, 0, 0.75)',
 		textTransform:"lowercase",
 		textTransform: "capitalize",
