@@ -1,19 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Button from '@material-ui/core/Button';
-import Dialog from '@material-ui/core/Dialog';
-import DialogTitle from '@material-ui/core/DialogTitle';
-import DialogContent from '@material-ui/core/DialogContent';
-import DialogContentText from '@material-ui/core/DialogContentText';
-import DialogActions from '@material-ui/core/DialogActions';
-import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 import withRoot from '../src/withRoot';
-import Navigation from '../Components/Navigation';
+
 import Layout from '../Components/Layout';
 import HomeSection1 from '../Components/HomeSection1';
-import HomeSection2 from '../Components/HomeSection2';
+import HomeSection3 from '../Components/HomeSection3';
 import Banner from '../Components/Banner';
+import HomeSection2 from '../Components/HomeSection2';
 
 const styles = theme => ({
   root: {
@@ -45,39 +39,16 @@ class Index extends React.Component {
 
     return (
       <Layout>
-        {/* <Navigation /> */}
-        {/* 
-         */}
-         <HomeSection2 />
-              <HomeSection1 />
+          <HomeSection1 />
+          <HomeSection2 />
+         <HomeSection3 />
+            
 
          <Banner />
     
     
       </Layout>
-      // <div className={classes.root}>
-      // <Navigation />
-      //   <Dialog open={open} onClose={this.handleClose}>
-      //     <DialogTitle>Super Secret Password</DialogTitle>
-      //     <DialogContent>
-      //       <DialogContentText>1-2-3-4-5</DialogContentText>
-      //     </DialogContent>
-      //     <DialogActions>
-      //       <Button color="primary" onClick={this.handleClose}>
-      //         OK
-      //       </Button>
-      //     </DialogActions>
-      //   </Dialog>
-      //   <Typography variant="display1" gutterBottom>
-      //  material
-      //   </Typography>
-      //   <Typography variant="subheading" gutterBottom>
-      //     example projectd
-      //   </Typography>
-      //   <Button variant="contained" color="secondary" onClick={this.handleClick}>
-      //     Super Secret Password
-      //   </Button>
-      // </div>
+      
     );
   }
 }
