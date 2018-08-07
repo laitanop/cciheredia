@@ -10,9 +10,9 @@ import ScrollAnimation from "react-animate-on-scroll";
 
 const styles = theme => ({
 	root: {
-		...theme.mixins.gutters(),
+		// ...theme.mixins.gutters(),
 		paddingTop: theme.spacing.unit * 2,
-		paddingBottom: theme.spacing.unit *5,
+		// paddingBottom: theme.spacing.unit *5,
 		[theme.breakpoints.up("sm")]: {
 			marginLeft: "250px",
 			marginRight: "250px",
@@ -30,7 +30,7 @@ const styles = theme => ({
   
 	},
 	icon: {
-		color: "#0C98E8",
+		color: "#3DE1AD",
 	},
 	
 	Title: {
@@ -88,9 +88,9 @@ const styles = theme => ({
 	},
 	img: {
 
-		backgroundImage: "url(\"/../static/Untitled (36).png\")",
-		width: "100%",
-		height: "400px",
+		backgroundImage: "url(\"/../static/view.png\")",
+		width: "115%",
+		height: "500px",
 		backgroundRepeat: "no-repeat",
 		backgroundSize: "contain",
 	
@@ -104,7 +104,7 @@ function HomeSection1(props) {
 		<div className={classes.root}>
 			<Typography className={classes.Title} variant="headline" component="h3">
 				<ScrollAnimation animateIn="fadeInUp">
-			Bienvenidos 	al Centro Cristiano Interancional Heredia
+			Bienvenidos 	al Centro Cristiano Interancional Galaad
 				</ScrollAnimation>
 				 {/* <br /><ScrollAnimation animateIn="fadeInUp">
 				al Centro Cristiano Interancional Heredia
@@ -125,10 +125,10 @@ function HomeSection1(props) {
          Horario de Reuniones
 						</Typography>
 						<Typography className={classes.paperSubTitle}>
-         Domingos 10:00 AM
+         Sabados 3:00 PM
 						</Typography>
 						<Typography className={classes.paperParagraph}>
-        Centro de Eventos La Finca 
+        Concepción de San Rafale de Heredia
 						</Typography>
 						
 					</Paper>

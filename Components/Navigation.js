@@ -22,7 +22,7 @@ const styles = {
 		marginRight: 20,
 	},
 	colorBar: {
-		background: "linear-gradient(45deg, #0D67FF 1%, #0C98E8 30%,#00E5FF 90%)",
+		background: "#3DE1AD",
 	},
 	logotext: {
 		fontFamily: "Nunito Sans, sans-serif",
