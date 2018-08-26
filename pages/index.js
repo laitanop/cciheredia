@@ -41,7 +41,7 @@ class Index extends React.Component {
       <Layout>
           <HomeSection1 />
           <HomeSection2 />
-         <HomeSection3 />
+         {/* <HomeSection3 /> */}
             
 
          <Banner />

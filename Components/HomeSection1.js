@@ -10,9 +10,7 @@ import ScrollAnimation from "react-animate-on-scroll";
 
 const styles = theme => ({
 	root: {
-		// ...theme.mixins.gutters(),
-		paddingTop: theme.spacing.unit * 2,
-		// paddingBottom: theme.spacing.unit *5,
+		marginTop: "-10px",
 		[theme.breakpoints.up("sm")]: {
 			marginLeft: "250px",
 			marginRight: "250px",
@@ -36,7 +34,7 @@ const styles = theme => ({
 	Title: {
 		padding: theme.spacing.unit * 2,
 		textAlign: "center",
-		fontWeight: "600",
+		fontWeight: "500",
 		lineHeight: "38.4px",
 		color: " rgb(84, 84, 84)",
 		fontSize: "32px",
@@ -88,7 +86,7 @@ const styles = theme => ({
 	},
 	img: {
 
-		backgroundImage: "url(\"/../static/view.png\")",
+		backgroundImage: "url(\"/../static/Desktop2.png\")",
 		width: "115%",
 		height: "500px",
 		backgroundRepeat: "no-repeat",

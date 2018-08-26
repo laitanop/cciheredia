@@ -10,9 +10,10 @@ import Grid from "@material-ui/core/Grid";
 const styles = theme => ({
 	
 	root: {
+	
 		flexGrow: 1,
 		backgroundImage: "url(\"/static/Untitled (1).png\")",
-		height: 400,
+		height: 600,
 
 	},
 	
@@ -37,7 +38,7 @@ const styles = theme => ({
 			
 	},
 	text: {
-		fontFamily: "Nunito, sans-serif",
+		// fontFamily: "Nunito, sans-serif",
 		fontSize: "16px",
 		fontWeight: "300",
 		lineHeight: "25.6px",
@@ -49,7 +50,7 @@ const styles = theme => ({
 
 	},
 	title: {
-		fontFamily: "Nunito, sans-serif",
+		// fontFamily: "Nunito, sans-serif",
 		fontSize: "26.6667px",
 		fontWeight: "600",
 		lineHeight: "32px",
@@ -62,10 +63,23 @@ const styles = theme => ({
 		},
 
 	},
+	
 	img: {
 		[theme.breakpoints.up("md")]: {
 			marginLeft: "150px",
 			marginTop: "-50px",
+		},
+		[theme.breakpoints.down("sm")]: {
+			marginLeft: "60px",
+			marginRight: "15px",
+		
+		},
+		
+	},
+	imgGV: {
+		[theme.breakpoints.up("md")]: {
+			// marginLeft: "150px",
+			marginTop: "-70px",
 		},
 		[theme.breakpoints.down("sm")]: {
 			marginLeft: "60px",
@@ -92,9 +106,32 @@ function HomeSection2(props) {
 								</div>
 							</Grid>
 							<Grid item xs={12} sm={6}>
-								<Typography className={classes.title}>
+								<div className={classes.title}>
                                  ¿Quines Somos?								
+								</div>
+								<div className={classes.text}>
+							Somos parte de la Red Global CCI, que aglutina a las iglesias conocidas como ‘Centro Cristiano Internacional’, con sus siglas ‘CCI’. Nuestra sede en Heredia, Costa Rica, fue establecida en el 2002.
+								</div>
+							</Grid>
+						</Grid>
+					</Paper>
+				</Grid>
+				<Grid item xs={12} >
+					<Paper className={classes.paper}>
+						<Grid container spacing={24}>
+							<Grid item xs={12}>
+								<Typography style={{ textAlign: "center", fontSize: "26px", fontWeight: "400", lineHeight: "32px", fontcolor: "rgb(84, 84, 84)"}}>
+                             Se parte de un Grupo de Vida							
 								</Typography>
+							</Grid>
+						
+							<Grid item xs={12} sm={6}>
+								<div className={classes.imgGV}>	
+									<img src="../static/joinGV.png" alt="CCI" height="300" width="400" />
+								</div>
+							</Grid>
+							<Grid item xs={12} sm={6}>
+								
 								<Typography className={classes.text}>
 							Somos parte de la Red Global CCI, que aglutina a las iglesias conocidas como ‘Centro Cristiano Internacional’, con sus siglas ‘CCI’. Nuestra sede en Heredia, Costa Rica, fue establecida en el 2002.
 								</Typography>
@@ -103,6 +140,7 @@ function HomeSection2(props) {
 					</Paper>
 				</Grid>
 			</Grid>
+		
 			
 		</Grid>
 	);

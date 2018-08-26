@@ -22,15 +22,16 @@ const styles = {
 		marginRight: 20,
 	},
 	colorBar: {
-		background: "#3DE1AD",
+		// background: "#3DE1AD",
+		background: "transparent",
 	},
 	logotext: {
 		fontFamily: "Nunito Sans, sans-serif",
 		fontSize: "20px",
-		fontWeight: "300",
+		fontWeight: "600",
 		lineHeigth: "30px",
-		// color:  'rgba(0, 0, 0, 0.9)',
-		color:  "#fff",
+		color:  "rgba(0, 0, 0, 0.9)",
+		// color:  "#fff",
 		paddingTop: "200px",
 
 	},
@@ -38,10 +39,9 @@ const styles = {
 		fontFamily: "Nunito Sans, sans-serif",
 		fontSize: "14px",
 		fontWeight: "300",
-		lineHeigth: "21.8182px",
-		color:  "#fff",
-		// color:  'rgba(0, 0, 0, 0.75)',
-		textTransform:"lowercase",
+		
+		color:  "rgba(0, 0, 0, 0.75)",
+	
 		textTransform: "capitalize",
 		"&:hover": {
 			color: "#030266",
@@ -49,8 +49,8 @@ const styles = {
 		},
 	},
 	img: {
-		backgroundImage: "url(\"/static/ccilogoblanco.png\")",
-		backgroundSize: "75%",
+		backgroundImage: "url(\"/static/logogalaad.png\")",
+		backgroundSize: "100%",
 		width:"82px",
 		height:"82px", 
 		backgroundRepeat:" no-repeat",
@@ -64,7 +64,7 @@ function Navigation(props) {
 	const { classes } = props;
 	return (
 		<div className={classes.root}>
-			<AppBar position="static" className={classes.colorBar}>
+			<div position="static" className={classes.colorBar}>
 				<Toolbar>
        
 					<IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
@@ -73,7 +73,7 @@ function Navigation(props) {
         
 					<Typography variant="title" color="inherit" className={classes.flex}>
     
-						<span className={classes.logotext}> &nbsp;Centro Cristiano Internacional</span>
+						<span className={classes.logotext}> &nbsp;Centro Cristiano Internacional Galaad</span>
 					</Typography>
          
 					<Button color="inherit"  className={classes.buttons} >Identidad</Button>
@@ -83,7 +83,7 @@ function Navigation(props) {
 					<Button color="inherit" className={classes.buttons}>Misiones</Button>
      
 				</Toolbar>
-			</AppBar>
+			</div>
      
 		</div>
 	);
