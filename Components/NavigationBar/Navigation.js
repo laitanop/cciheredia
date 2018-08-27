@@ -7,8 +7,13 @@ import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/core/Icon";
+import ResponsiveNavigation from "./ResponsiveNavigation";
 
-const styles = {
+
+// color: "#3DE1AD",
+
+const styles = theme => ({
+
 	root: {
 		flexGrow: 1,
    
@@ -18,47 +23,65 @@ const styles = {
    
 	},
 	menuButton: {
+		[theme.breakpoints.up('md')]: {
 		marginLeft: 100,
 		marginRight: 20,
+		  },
+		
 	},
 	colorBar: {
 		// background: "#3DE1AD",
 		background: "transparent",
 	},
 	logotext: {
-		fontFamily: "Nunito Sans, sans-serif",
+
 		fontSize: "20px",
 		fontWeight: "600",
 		lineHeigth: "30px",
-		color:  "rgba(0, 0, 0, 0.9)",
-		// color:  "#fff",
+		color:  "rgb(84, 84, 84)",
+	
 		paddingTop: "200px",
+		[theme.breakpoints.down('md')]: {
+			fontSize: "14px",
+		  },
 
 	},
 	buttons: {
-		fontFamily: "Nunito Sans, sans-serif",
+	
 		fontSize: "14px",
 		fontWeight: "300",
 		
 		color:  "rgba(0, 0, 0, 0.75)",
 	
+	
 		textTransform: "capitalize",
 		"&:hover": {
-			color: "#030266",
-			fontWeight: "500",
+			color: "#2CA17C",
+			fontWeight: "600",
 		},
+		[theme.breakpoints.down('md')]: {
+			display: "none",
+		  },
 	},
 	img: {
-		backgroundImage: "url(\"/static/logogalaad.png\")",
+		backgroundImage: "url(\"/static/Artboard1.png\")",
 		backgroundSize: "100%",
 		width:"82px",
 		height:"82px", 
 		backgroundRepeat:" no-repeat",
-		// "&:hover": {
-		// 	backgroundImage: "url(\"/static/Webp.net-gifmaker2.gif\")",
-		// },
+	
 	},
-};
+	responsive: {
+		[theme.breakpoints.down('md')]: {
+			visibility: "visible",
+		  },
+		  [theme.breakpoints.up('md')]: {
+			visibility: "hidden",
+		  },
+	}
+	
+});
+
 
 function Navigation(props) {
 	const { classes } = props;
@@ -71,16 +94,18 @@ function Navigation(props) {
 						<div className={classes.img} />
 					</IconButton>
         
-					<Typography variant="title" color="inherit" className={classes.flex}>
+					<div color="inherit" className={classes.flex}>
     
 						<span className={classes.logotext}> &nbsp;Centro Cristiano Internacional Galaad</span>
-					</Typography>
-         
-					<Button color="inherit"  className={classes.buttons} >Identidad</Button>
-					<Button color="inherit" className={classes.buttons}>Celebraciones</Button>
-					<Button color="inherit" className={classes.buttons}>Grupos de Vida</Button>
+					</div>
+					<Button color="inherit"  className={classes.buttons} >Inicio</Button>
+					<Button color="inherit"  className={classes.buttons}  href="/nosotros">Nosotros</Button>
 					<Button color="inherit" className={classes.buttons}>Ministerios</Button>
+					<Button color="inherit" className={classes.buttons}>Eventos</Button>
+					<Button color="inherit" className={classes.buttons}>Grupos de Vida</Button>
 					<Button color="inherit" className={classes.buttons}>Misiones</Button>
+					<Button color="inherit" className={classes.buttons}>Contacto</Button>
+<div className={classes.responsive}><ResponsiveNavigation /></div>
      
 				</Toolbar>
 			</div>
@@ -94,3 +119,6 @@ Navigation.propTypes = {
 };
 
 export default withStyles(styles)(Navigation);
+
+
+// https://churchthemes.com/church-website-content/

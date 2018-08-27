@@ -102,7 +102,7 @@ function HomeSection2(props) {
 						<Grid container spacing={24}>
 							<Grid item xs={12} sm={6}>
 								<div className={classes.img}>	
-									<img src="../static/logogalaad.png" alt="CCI" height="200" width="200" />
+									<img src="../static/Artboard1.png" alt="CCI" height="200" width="200" />
 								</div>
 							</Grid>
 							<Grid item xs={12} sm={6}>

@@ -10,6 +10,8 @@ import ScrollAnimation from "react-animate-on-scroll";
 
 const styles = theme => ({
 	root: {
+		padding: theme.spacing.unit * 2,
+		flexGrow: 1,
 		marginTop: "-10px",
 		[theme.breakpoints.up("sm")]: {
 			marginLeft: "250px",
@@ -24,11 +26,13 @@ const styles = theme => ({
 		color: theme.palette.text.secondary,
 		[theme.breakpoints.down("sm")]: {
 			padding: theme.spacing.unit * 6,
+			
+			
 		},
   
 	},
 	icon: {
-		color: "#3DE1AD",
+		color: "#2CA17C",
 	},
 	
 	Title: {
@@ -38,7 +42,7 @@ const styles = theme => ({
 		lineHeight: "38.4px",
 		color: " rgb(84, 84, 84)",
 		fontSize: "32px",
-		fontFamily: "Nunito, sans-serif",
+	
 		marginTop: "50px",
 		[theme.breakpoints.down("sm")]: {
 			fontSize: "22px",
@@ -48,13 +52,12 @@ const styles = theme => ({
 	paperTitle: {
 		padding: theme.spacing.unit * 2,
 		textAlign: "center",
-		color: "rgb(84, 84, 84)",
-		fontFamily: "Nunito, sans-serif",
+	
 		fontSize: "26.66667px",
 		fontWeight: "600",
 		lineHeight: "32px",
 		[theme.breakpoints.down("sm")]: {
-			fontSize: "16px",
+			fontSize: "18px",
 		},
 
     
@@ -64,24 +67,24 @@ const styles = theme => ({
 
 	paperSubTitle: {
 		color: "rgb(84, 84, 84)",
-		fontFamily: "Nunito, sans-serif",
+	
 		fontSize: "24px",
 		fontWeight: "600",
 		lineHeight: "24px",	
 		[theme.breakpoints.down("sm")]: {
-			fontSize: "14px",
+			fontSize: "18px",
 		},
 		
 	},
 	paperParagraph: {
 
 		color: "rgb(84, 84, 84)",
-		fontFamily: "Nunito, sans-serif",
+
 		fontSize: "22.2222px",
 		fontWeight: "300",
 		lineHeight: "26.6667px",
 		[theme.breakpoints.down("sm")]: {
-			fontSize: "12px",
+			fontSize: "16px",
 		},
 	},
 	img: {
@@ -91,6 +94,11 @@ const styles = theme => ({
 		height: "500px",
 		backgroundRepeat: "no-repeat",
 		backgroundSize: "contain",
+		[theme.breakpoints.down("sm")]: {
+			width: "95%",
+			height: "400px",
+			padding: theme.spacing.unit * 4,
+		},
 	
 	}
 });
@@ -100,34 +108,31 @@ function HomeSection1(props) {
 
 	return (
 		<div className={classes.root}>
-			<Typography className={classes.Title} variant="headline" component="h3">
+		
+			<div className={classes.Title} >
 				<ScrollAnimation animateIn="fadeInUp">
-			Bienvenidos 	al Centro Cristiano Interancional Galaad
+		Porque yo tu señor y Dios estare contigo donde quieras que vayas. Josue 1:9
 				</ScrollAnimation>
-				 {/* <br /><ScrollAnimation animateIn="fadeInUp">
-				al Centro Cristiano Interancional Heredia
-				</ScrollAnimation> */}
-			</Typography>
+			
+			</div>
 			
 		
 			
 			<Grid container spacing={24}>
-				<Grid item xs={12}>
-         
-				</Grid>
+				
 				<Grid item xs={12} sm={6} >
 					<Paper  className={classes.paper} elevation={24}>
 						<span className={classes.icon}><i className="fas fa-home fa-3x" /></span>
 				
-						<Typography className={classes.paperTitle}>
+						<div className={classes.paperTitle}>
          Horario de Reuniones
-						</Typography>
-						<Typography className={classes.paperSubTitle}>
+						</div>
+						<div className={classes.paperSubTitle}>
          Sabados 3:00 PM
-						</Typography>
-						<Typography className={classes.paperParagraph}>
+						</div>
+						<div className={classes.paperParagraph}>
         Concepción de San Rafale de Heredia
-						</Typography>
+						</div>
 						
 					</Paper>
 				</Grid>
@@ -140,7 +145,7 @@ function HomeSection1(props) {
 			</Grid>
 
 	
-     
+	
 		</div>
 	);
 }
