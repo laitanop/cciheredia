@@ -2,8 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
-import Typography from "@material-ui/core/Typography";
-import { inherits } from "util";
+
 import Grid from "@material-ui/core/Grid";
 
 
@@ -38,8 +37,8 @@ const styles = theme => ({
 			
 	},
 	text: {
-		// fontFamily: "Nunito, sans-serif",
-		fontSize: "16px",
+		textAlign: "justify",
+		fontSize: "18px",
 		fontWeight: "300",
 		lineHeight: "25.6px",
 		color: "rgb(143, 143, 143)",
@@ -50,7 +49,7 @@ const styles = theme => ({
 
 	},
 	title: {
-		// fontFamily: "Nunito, sans-serif",
+
 		fontSize: "26.6667px",
 		fontWeight: "600",
 		lineHeight: "32px",
@@ -73,12 +72,14 @@ const styles = theme => ({
 			marginLeft: "60px",
 			marginRight: "15px",
 		
+			
+		
 		},
 		
 	},
 	imgGV: {
 		[theme.breakpoints.up("md")]: {
-			// marginLeft: "150px",
+		
 			marginTop: "-70px",
 		},
 		[theme.breakpoints.down("sm")]: {
@@ -87,7 +88,11 @@ const styles = theme => ({
 		
 		},
 		
-	}
+	},  paper1: {
+		padding: theme.spacing.unit * 2,
+		textAlign: "center",
+		color: theme.palette.text.secondary,
+	  },
 
 });
 
@@ -95,7 +100,7 @@ function HomeSection2(props) {
 	const { classes } = props;
 
 	return (
-		<Grid container className={classes.root}>
+		<div container className={classes.root}>
 			<Grid container spacing={24} className={classes.demo}>
 				<Grid item xs={12} >
 					<Paper className={classes.paper}>
@@ -116,33 +121,38 @@ function HomeSection2(props) {
 						</Grid>
 					</Paper>
 				</Grid>
-				<Grid item xs={12} >
+			
+			</Grid>
+			<Grid container spacing={24} >
+				<Grid item xs={12}>
 					<Paper className={classes.paper}>
 						<Grid container spacing={24}>
-							<Grid item xs={12}>
-								<Typography style={{ textAlign: "center", fontSize: "26px", fontWeight: "400", lineHeight: "32px", fontcolor: "rgb(84, 84, 84)"}}>
-                             Se parte de un Grupo de Vida							
-								</Typography>
+							<Grid item xs={12} className={classes.title}>
+								<div className={classes.paper1}>Se parte de un grupo de vida </div>
+							</Grid>
+				
+							<Grid item xs={12} sm={4}>
+								<div className={classes.paper1}>	<img src="../static/join.png" alt="CCI" height="150" width="150" /></div>
+								<div className={classes.paper1}>Unete</div>
+							</Grid>
+							<Grid item xs={12} sm={4}>
+								<div className={classes.paper1}>	<img src="../static/grow.png" alt="CCI" height="150" width="150" /></div>
+								<div className={classes.paper1}>	Crece </div>
+							</Grid>
+							<Grid item xs={12} sm={4}>
+								<div className={classes.paper1}>	<img src="../static/serve.png" alt="CCI" height="150" width="150" /></div>
+								<div className={classes.paper1}>Sirve</div>
 							</Grid>
 						
-							<Grid item xs={12} sm={6}>
-								<div className={classes.imgGV}>	
-									<img src="../static/joinGV.png" alt="CCI" height="300" width="400" />
-								</div>
-							</Grid>
-							<Grid item xs={12} sm={6}>
-								
-								<Typography className={classes.text}>
-							Somos parte de la Red Global CCI, que aglutina a las iglesias conocidas como ‘Centro Cristiano Internacional’, con sus siglas ‘CCI’. Nuestra sede en Heredia, Costa Rica, fue establecida en el 2002.
-								</Typography>
-							</Grid>
+       
 						</Grid>
 					</Paper>
 				</Grid>
+				
+       
 			</Grid>
-		
 			
-		</Grid>
+		</div>
 	);
 }
 

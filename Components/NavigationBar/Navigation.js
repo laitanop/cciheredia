@@ -67,7 +67,7 @@ const styles = theme => ({
 		backgroundImage: "url(\"/static/Artboard1.png\")",
 		backgroundSize: "100%",
 		width:"82px",
-		height:"82px", 
+		height:"62px", 
 		backgroundRepeat:" no-repeat",
 	
 	},
@@ -90,7 +90,7 @@ function Navigation(props) {
 			<div position="static" className={classes.colorBar}>
 				<Toolbar>
        
-					<IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
+					<IconButton href="/index" className={classes.menuButton} color="inherit" aria-label="Menu">
 						<div className={classes.img} />
 					</IconButton>
         
@@ -98,7 +98,7 @@ function Navigation(props) {
     
 						<span className={classes.logotext}> &nbsp;Centro Cristiano Internacional Galaad</span>
 					</div>
-					<Button color="inherit"  className={classes.buttons} >Inicio</Button>
+					<Button color="inherit"  className={classes.buttons} href="/index">Inicio</Button>
 					<Button color="inherit"  className={classes.buttons}  href="/nosotros">Nosotros</Button>
 					<Button color="inherit" className={classes.buttons}>Ministerios</Button>
 					<Button color="inherit" className={classes.buttons}>Eventos</Button>

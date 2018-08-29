@@ -45,7 +45,9 @@ const styles = theme => ({
 	
 		marginTop: "50px",
 		[theme.breakpoints.down("sm")]: {
-			fontSize: "22px",
+			fontSize: "16px",
+			lineHeight: "20.4px",
+			marginTop: "-10px",
 		},
     
 	},
@@ -110,9 +112,9 @@ function HomeSection1(props) {
 		<div className={classes.root}>
 		
 			<div className={classes.Title} >
-				<ScrollAnimation animateIn="fadeInUp">
+				{/* <ScrollAnimation animateIn="fadeInUp"> */}
 		Porque yo tu señor y Dios estare contigo donde quieras que vayas. Josue 1:9
-				</ScrollAnimation>
+				{/* </ScrollAnimation> */}
 			
 			</div>
 			
