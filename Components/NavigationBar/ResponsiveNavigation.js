@@ -20,7 +20,7 @@ const styles = theme => ({
     width: 'auto',
   },
   icon: {
-	  color: "#3DE1AD",
+	  color: "#96ad32",
   }
 });
 

@@ -56,7 +56,7 @@ const styles = theme => ({
 	
 		textTransform: "capitalize",
 		"&:hover": {
-			color: "#2CA17C",
+			color: "#96ad32",
 			fontWeight: "600",
 		},
 		[theme.breakpoints.down('md')]: {

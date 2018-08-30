@@ -13,6 +13,7 @@ const styles = theme => ({
 		padding: theme.spacing.unit * 2,
 		flexGrow: 1,
 		marginTop: "-10px",
+		marginBottom: "50px",
 		[theme.breakpoints.up("sm")]: {
 			marginLeft: "250px",
 			marginRight: "250px",
@@ -32,7 +33,7 @@ const styles = theme => ({
   
 	},
 	icon: {
-		color: "#2CA17C",
+		color: "#96ad32",
 	},
 	
 	Title: {
@@ -91,11 +92,12 @@ const styles = theme => ({
 	},
 	img: {
 
-		backgroundImage: "url(\"/../static/Desktop2.png\")",
-		width: "115%",
-		height: "500px",
+		backgroundImage: "url(\"/../static/Slice 1.png\")",
+		width: "130%",
+		height: "380px",
 		backgroundRepeat: "no-repeat",
 		backgroundSize: "contain",
+	
 		[theme.breakpoints.down("sm")]: {
 			width: "95%",
 			height: "400px",
@@ -130,17 +132,17 @@ function HomeSection1(props) {
          Horario de Reuniones
 						</div>
 						<div className={classes.paperSubTitle}>
-         Sabados 3:00 PM
+         Sábados 3:00 PM
 						</div>
 						<div className={classes.paperParagraph}>
-        Concepción de San Rafale de Heredia
+        Concepción de San Rafael de Heredia
 						</div>
 						
 					</Paper>
 				</Grid>
 				<Grid item xs={12} sm={6}>
 					<div className={classes.img}></div>
-		 	{/* <img src="../static/Untitled (36).png" alt="CCI" height="370" width="500" /> */}
+		
 
 				</Grid>
 

@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
+import Button from "@material-ui/core/Button";
 
 import Grid from "@material-ui/core/Grid";
 
@@ -21,6 +22,7 @@ const styles = theme => ({
 		alignItems: "center",
 		direction: "row",
 		justify:  "center",
+		paddingTop: "100px",
 	},
 	paper: {
 		
@@ -91,7 +93,11 @@ const styles = theme => ({
 	},  paper1: {
 		padding: theme.spacing.unit * 2,
 		textAlign: "center",
-		color: theme.palette.text.secondary,
+	
+	},
+	button: {
+		margin: theme.spacing.unit,
+		BackgroundColor: "red",
 	  },
 
 });
@@ -143,9 +149,19 @@ function HomeSection2(props) {
 								<div className={classes.paper1}>	<img src="../static/serve.png" alt="CCI" height="150" width="150" /></div>
 								<div className={classes.paper1}>Sirve</div>
 							</Grid>
-						
+							<Grid item xs={12}>
+								<div className={classes.text}>El sistema celular GRUPOS DE VIDA es nuestra actividad entre semana. Se trata de un movimiento de pequeños grupos que se reúnen de manera presencial o de manera virtual (por un servicio online por la Internet), una vez a la semana. Actualmente contamos con cerca de 50 Grupos de Vida o GV. </div>
+							</Grid>
        
 						</Grid>
+						<Grid item xs={12} className={classes.title}>
+							<div className={classes.paper1}><Button variant="contained"  style={{backgroundColor: "#96362C", color: "#fff"}}>
+      Unirse a un Grupo
+							</Button> </div>
+						</Grid>
+					
+						
+						
 					</Paper>
 				</Grid>
 				
