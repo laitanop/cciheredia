@@ -22,8 +22,8 @@ const styles = theme => ({
 	root1: {
 	
 		flexGrow: 1,
-		backgroundImage: "url(\"/static/Untitled (1).png\")",
-		height: 600,
+		// backgroundImage: "url(\"/static/Untitled (1).png\")",
+		// height: 600,
 
 	},
 	paper: {

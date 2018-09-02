@@ -10,7 +10,7 @@ import MenuIcon from "@material-ui/core/Icon";
 import ResponsiveNavigation from "./ResponsiveNavigation";
 
 
-// color: "#3DE1AD",
+
 
 const styles = theme => ({
 
@@ -30,7 +30,7 @@ const styles = theme => ({
 		
 	},
 	colorBar: {
-		// background: "#3DE1AD",
+
 		background: "transparent",
 	},
 	logotext: {
@@ -48,7 +48,7 @@ const styles = theme => ({
 	},
 	buttons: {
 	
-		fontSize: "14px",
+		fontSize: "18px",
 		fontWeight: "300",
 		
 		color:  "rgba(0, 0, 0, 0.75)",
@@ -65,8 +65,8 @@ const styles = theme => ({
 	},
 	img: {
 		backgroundImage: "url(\"/static/Artboard1.png\")",
-		backgroundSize: "100%",
-		width:"82px",
+		backgroundSize: "150%",
+		width:"182px",
 		height:"62px", 
 		backgroundRepeat:" no-repeat",
 	
@@ -91,19 +91,15 @@ function Navigation(props) {
 				<Toolbar>
        
 					<IconButton href="/index" className={classes.menuButton} color="inherit" aria-label="Menu">
-						<div className={classes.img} />
+						{/* <div className={classes.img} /> */}
+						<img src="static/Artboard1.png" alt="Smiley face" height="60" width="70" />
+
 					</IconButton>
         
-					<div color="inherit" className={classes.flex}>
-    
-						<span className={classes.logotext}> &nbsp;Centro Cristiano Internacional Galaad</span>
-					</div>
+				
 					<Button color="inherit"  className={classes.buttons} href="/index">Inicio</Button>
 					<Button color="inherit"  className={classes.buttons}  href="/nosotros">Nosotros</Button>
-					<Button color="inherit" className={classes.buttons}>Ministerios</Button>
-					<Button color="inherit" className={classes.buttons}>Eventos</Button>
-					<Button color="inherit" className={classes.buttons}>Grupos de Vida</Button>
-					<Button color="inherit" className={classes.buttons}>Misiones</Button>
+					
 					<Button color="inherit" className={classes.buttons}>Contacto</Button>
 <div className={classes.responsive}><ResponsiveNavigation /></div>
      

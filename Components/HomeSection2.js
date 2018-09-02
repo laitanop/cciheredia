@@ -7,13 +7,14 @@ import Button from "@material-ui/core/Button";
 import Grid from "@material-ui/core/Grid";
 
 
+
+
 const styles = theme => ({
 	
 	root: {
 	
 		flexGrow: 1,
-		backgroundImage: "url(\"/static/Untitled (1).png\")",
-		height: 600,
+	
 
 	},
 	
@@ -31,6 +32,7 @@ const styles = theme => ({
 			padding: theme.spacing.unit * 12,
 			marginLeft: "150px",
 			marginRight: "150px",
+			backgroundColor: "#fff",
 		},
 		[theme.breakpoints.down("sm")]: {
 			marginLeft: "15px",
@@ -93,6 +95,7 @@ const styles = theme => ({
 	},  paper1: {
 		padding: theme.spacing.unit * 2,
 		textAlign: "center",
+
 	
 	},
 	button: {
@@ -167,7 +170,7 @@ function HomeSection2(props) {
 				
        
 			</Grid>
-			
+
 		</div>
 	);
 }

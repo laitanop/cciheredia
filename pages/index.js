@@ -4,9 +4,9 @@ import { withStyles } from '@material-ui/core/styles';
 import withRoot from '../src/withRoot';
 
 import Layout from '../Components/Layout';
-import HomeSection1 from '../Components/HomeSection1';
+import HomeSection1 from '../Components/HomeSection1/HomeSection1';
 import HomeSection3 from '../Components/HomeSection3';
-import Banner from '../Components/Banner';
+
 import HomeSection2 from '../Components/HomeSection2';
 
 const styles = theme => ({
@@ -44,7 +44,7 @@ class Index extends React.Component {
          {/* <HomeSection3 /> */}
             
 
-         <Banner />
+
     
     
       </Layout>

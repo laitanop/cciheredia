@@ -23,7 +23,7 @@ class MyDocument extends Document {
 					/>
 					{/* PWA primary color */}
 					<meta name="theme-color" content={pageContext.theme.palette.primary.main} />
-					<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+					<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" rel="stylesheet" />
 					<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
 						rel="stylesheet" />
 				
@@ -31,7 +31,7 @@ class MyDocument extends Document {
 					<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
 
 				</Head>
-				<body style={{backgroundColor: "#fff", fontFamily: "Open Sans', sans-serif" }}>
+				<body style={{backgroundColor: "#fff", fontFamily: "Roboto, sans-serif" }}>
 					<Main />
 					<NextScript />
 				</body>

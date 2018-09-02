@@ -2,9 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
-import Typography from "@material-ui/core/Typography";
+
 import Grid from "@material-ui/core/Grid";
-import ScrollAnimation from "react-animate-on-scroll";
+import NewsCci from "./NewsCci";
+
 
 
 
@@ -22,15 +23,22 @@ const styles = theme => ({
     
 	},
 	paper: {
-		padding: theme.spacing.unit * 10,
-		textAlign: "center",
+		 padding: theme.spacing.unit * 6,
+		 textAlign: "center",
 		color: theme.palette.text.secondary,
-		[theme.breakpoints.down("sm")]: {
-			padding: theme.spacing.unit * 6,
-			
-			
-		},
+	
+		[theme.breakpoints.up("md")]: {
+			padding: theme.spacing.unit * 10,
+		  },
+		[theme.breakpoints.up("xl")]: {
+			padding: theme.spacing.unit * 20,
+		  },
   
+	},
+	paperNews: {
+		padding: theme.spacing.unit * 3.5,
+		textAlign: "center",
+	   color: theme.palette.text.secondary,
 	},
 	icon: {
 		color: "#96ad32",
@@ -41,7 +49,7 @@ const styles = theme => ({
 		textAlign: "center",
 		fontWeight: "500",
 		lineHeight: "38.4px",
-		color: " rgb(84, 84, 84)",
+		color: " #596327",
 		fontSize: "32px",
 	
 		marginTop: "50px",
@@ -114,9 +122,7 @@ function HomeSection1(props) {
 		<div className={classes.root}>
 		
 			<div className={classes.Title} >
-				{/* <ScrollAnimation animateIn="fadeInUp"> */}
-		Porque yo tu señor y Dios estare contigo donde quieras que vayas. Josue 1:9
-				{/* </ScrollAnimation> */}
+		Centro Cristiano Internacional Galaad
 			
 			</div>
 			
@@ -141,8 +147,22 @@ function HomeSection1(props) {
 					</Paper>
 				</Grid>
 				<Grid item xs={12} sm={6}>
-					<div className={classes.img}></div>
-		
+					{/* <div className={classes.img}></div> */}
+					<Paper  className={classes.paperNews} elevation={24}>
+						{/* <span className={classes.icon}><i className="fas fa-home fa-3x" /></span>
+				
+						<div className={classes.paperTitle}>
+         Horario de Reuniones
+						</div>
+						<div className={classes.paperSubTitle}>
+         Sábados 3:00 PM
+						</div>
+						<div className={classes.paperParagraph}>
+        Concepción de San Rafael de Heredia
+						</div> */}
+						<NewsCci />
+						
+					</Paper>
 
 				</Grid>
 
