@@ -6,13 +6,12 @@ import Card from "@material-ui/core/Card";
 import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
-import Button from "@material-ui/core/Button";
-import Typography from "@material-ui/core/Typography";
+
 
 
 const styles = theme => ({
 	card: {
-		maxWidth: 345,
+		maxWidth: 445,
 		[theme.breakpoints.up("xl")]: {
 			maxWidth: 745,
      
@@ -28,13 +27,36 @@ const styles = theme => ({
 		},
    
 	},
+	title: {
+		fontSize: "18px",
+		color: "#596327",
+		fontWeight: "bold"
+     
+	},
+	text: {
+		fontSize: "14px",
+		textAlign: "justify",
+		marginTop: "7px",
+
+	
+         
+	},
+	icon: {
+		color: "#96ad32",
+    
+	},
+
+   
+
 });
 
 function NewsCci(props) {
 	const { classes } = props;
 	return (
 		<div className={classes.card}>
+		
 			<div>
+     
 				<CardMedia
 					component="img"
 					className={classes.media}
@@ -43,25 +65,29 @@ function NewsCci(props) {
 					title="Contemplative Reptile"
 				/>
 				<CardContent>
-					<Typography gutterBottom variant="headline" component="h2">
-            Lizard
+					<div className={classes.title}>
+           Mesa del señor 
             
-					</Typography>
-					<Typography component="p">
-            Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-            across all continents except Antarctica
-        
-					</Typography>
+					</div>
+					<div className={classes.text}>
+          Cada primer domingo de mes, en el Centro Cristiano Internacional de Galaad
+          participamos de la Mesa del Señor. 
+          
+					</div>
+         
 				</CardContent>
 			</div>
 			<CardActions>
-				<Button size="small" color="primary">
-          Share
-				</Button>
-				<Button size="small" color="primary">
-          Learn More
-				</Button>
 			
+				<div className={classes.icon}>
+				
+					<i className="material-icons">
+calendar_today
+					</i>&nbsp; &nbsp; 
+			
+     Sabado 1 de septiembre 2018
+          
+				</div>
 			</CardActions>
 		</div>
 	);

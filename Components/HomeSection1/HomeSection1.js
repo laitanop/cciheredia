@@ -147,20 +147,11 @@ function HomeSection1(props) {
 					</Paper>
 				</Grid>
 				<Grid item xs={12} sm={6}>
-					{/* <div className={classes.img}></div> */}
+			
 					<Paper  className={classes.paperNews} elevation={24}>
-						{/* <span className={classes.icon}><i className="fas fa-home fa-3x" /></span>
-				
-						<div className={classes.paperTitle}>
-         Horario de Reuniones
-						</div>
-						<div className={classes.paperSubTitle}>
-         Sábados 3:00 PM
-						</div>
-						<div className={classes.paperParagraph}>
-        Concepción de San Rafael de Heredia
-						</div> */}
+					<div style={{backgroundColor: "#dfe9a0", marginBottom:"10px"}}>Noticias</div>
 						<NewsCci />
+						
 						
 					</Paper>
 
