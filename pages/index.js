@@ -9,6 +9,7 @@ import HomeSection3 from '../Components/HomeSection3';
 
 import HomeSection2 from '../Components/HomeSection2/HomeSection2';
 
+
 const styles = theme => ({
   root: {
     textAlign: 'center',
@@ -45,7 +46,7 @@ class Index extends React.Component {
             
 
 
-    
+ 
     
       </Layout>
       

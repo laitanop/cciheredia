@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
 import Navigation from "./NavigationBar/Navigation";
+import Footer from "../Components/Footer/Footer";
 
 
 const styles = theme => ({
@@ -24,6 +25,7 @@ class Layout extends React.Component {
 			<div>
 				<Navigation />
 				{this.props.children}
+				<Footer />
 			</div>
 		);
 	}
