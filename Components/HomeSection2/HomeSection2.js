@@ -6,6 +6,8 @@ import Button from "@material-ui/core/Button";
 
 import Grid from "@material-ui/core/Grid";
 import VideoCard from "./VideoCard";
+import Belive from "./Belive";
+import GrowImage from "./SVGImages/GrowImage";
 
 
 
@@ -13,19 +15,18 @@ import VideoCard from "./VideoCard";
 const styles = theme => ({
 	
 	root: {
-	
 		flexGrow: 1,
 	
-
+		padding: "100px",
+		margin: "100px",
+		[theme.breakpoints.down("sm")]: {
+			marginLeft: "20px",
+			marginRight: "20px",
+			padding: "10px",
+		},
+	
 	},
 	
-	demo: {
-		
-		alignItems: "center",
-		direction: "row",
-		justify:  "center",
-		paddingTop: "100px",
-	},
 	paper: {
 		
 
@@ -41,65 +42,12 @@ const styles = theme => ({
 		  },
 			
 	},
-	text: {
-		textAlign: "justify",
-		fontSize: "18px",
-		fontWeight: "300",
-		lineHeight: "25.6px",
-		color: "rgb(143, 143, 143)",
-		[theme.breakpoints.down("sm")]: {
-			marginLeft: "15px",
-			marginRight: "15px",
-		},
 
-	},
-	title: {
-
-		fontSize: "26.6667px",
-		fontWeight: "600",
-		lineHeight: "32px",
-		color: "rgb(84, 84, 84)",
-		marginBottom: "15px",
-		[theme.breakpoints.down("sm")]: {
-			fontSize: "20px",
-			marginLeft: "15px",
-			marginRight: "15px",
-		},
-
-	},
 	
-	img: {
-		[theme.breakpoints.up("md")]: {
-			marginLeft: "150px",
-			marginTop: "-50px",
-		},
-		[theme.breakpoints.down("sm")]: {
-			marginLeft: "60px",
-			marginRight: "15px",
-		
-			
-		
-		},
-		
-	},
-	imgGV: {
-		[theme.breakpoints.up("md")]: {
-		
-			marginTop: "-70px",
-		},
-		[theme.breakpoints.down("sm")]: {
-			marginLeft: "60px",
-			marginRight: "15px",
-		
-		},
-		
-	},  paper1: {
+	paper1: {
 		padding: theme.spacing.unit * 2,
 		textAlign: "center",
 		fontSize: "20px",
-	
-
-	
 	},
 	scroll: {
 	
@@ -109,10 +57,7 @@ const styles = theme => ({
 
 	
 	},
-	button: {
-		margin: theme.spacing.unit,
-		BackgroundColor: "red",
-	  },
+
 
 });
 
@@ -120,58 +65,33 @@ function HomeSection2(props) {
 	const { classes } = props;
 
 	return (
-		<div container className={classes.root}>
-			
-			<Grid container spacing={24} >
-				<Grid item xs={12}>
-					<Paper className={classes.paper} elevation={24}>
-						<Grid container spacing={24}>
-							<Grid container spacing={24}>
-								<Grid item sm={6} >
-								
-				
-									<Grid item  sm={12}>
-									
-									
-										<div className={classes.paper1}><img src="../static/join.png" alt="CCI" height="70" width="70" /></div>
-										<div className={classes.paper1}>Creer</div>
-									</Grid>
-									<Grid item  sm={12}>
-										<div className={classes.paper1}>	<img src="../static/grow.png" alt="CCI" height="70" width="70" /></div>
-										<div className={classes.paper1}>	Crecer </div>
-									</Grid>
-									<Grid item sm={12}>
-										<div className={classes.paper1}>	<img src="../static/serve.png" alt="CCI" height="70" width="70" /></div>
-										<div className={classes.paper1}>Servir</div>
-									</Grid>
-								
-       
-								</Grid>
-					
-								<Grid item sm={6} >
-									<Grid item xs={12} className={classes.title}>
-										<div className={classes.paper1}>Sermones </div>
-										<div className={classes.scroll}>
-											<VideoCard />
-										</div>
-									
-									</Grid>
-				
-									
-       
-								</Grid>
-							</Grid>
-       
-						</Grid>
-						
-						
-					</Paper>
-				</Grid>
-				
-       
-			</Grid>
 
+		<div>
+			<Paper className={classes.root} elevation={24}>
+	  <Grid container spacing={24}>
+				
+					<Grid item xs={12} sm={6}>
+						<div className={classes.paper1}>Creer</div>
+						<div className={classes.paper1}><img src="../static/join.png" alt="CCI" height="100" width="100" /> </div>
+						<div className={classes.paper1}>Crecer</div>
+						<div className={classes.paper1}>	<GrowImage /> </div>
+						<div className={classes.paper1}>Servir</div>
+						<div className={classes.paper1}><img src="../static/serve.png" alt="CCI" height="100" width="100" /> </div>
+
+					
+					</Grid>
+					<Grid item xs={12} sm={6}>
+						<div className={classes.paper1}>Sermones </div>
+						<div className={classes.scroll}>
+							<VideoCard />
+						</div>	
+					</Grid>
+      
+				</Grid>
+			</Paper>
 		</div>
+ 
+	
 	);
 }
 

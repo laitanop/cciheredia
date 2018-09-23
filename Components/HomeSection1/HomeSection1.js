@@ -5,6 +5,7 @@ import Paper from "@material-ui/core/Paper";
 
 import Grid from "@material-ui/core/Grid";
 import NewsCci from "./NewsCci";
+import HomeImage from "../HomeSection2/SVGImages/HomeImage";
 
 
 
@@ -132,7 +133,10 @@ function HomeSection1(props) {
 				
 				<Grid item xs={12} sm={6} >
 					<Paper  className={classes.paper} elevation={24}>
-						<span className={classes.icon}><i className="fas fa-home fa-3x" /></span>
+						<span className={classes.icon}>
+						<HomeImage />
+						{/* <i className="fas fa-home fa-3x" /> */}
+						</span>
 				
 						<div className={classes.paperTitle}>
          Horario de Reuniones

@@ -1,11 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
-import Card from "@material-ui/core/Card";
-import CardContent from "@material-ui/core/CardContent";
-import CardMedia from "@material-ui/core/CardMedia";
-import IconButton from "@material-ui/core/IconButton";
-import Typography from "@material-ui/core/Typography";
+
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
 
@@ -16,7 +12,7 @@ const styles = theme => ({
 		paddingBottom: theme.spacing.unit * 1,
 		"&:hover": {
 			boxShadow: "5px 5px 5px 5px #BDBDBD"
-		  }	
+		}	
 	
 	  },
 });
@@ -24,7 +20,7 @@ const styles = theme => ({
 
 
 function VideoCard(props) {
-	const { classes, theme } = props;
+	const { classes } = props;
 	const listVideo = [
 		{
 			src: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/492538365&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true", 
@@ -35,20 +31,33 @@ function VideoCard(props) {
 			name: "Imparte fuerzas para vencer el miedo."	
 		},
 		{
-			src: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/480184503&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true", 
+			src: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/480298671&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true", 
 			name: "Sé vivir."
 		},
 		{
-			src: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/492538365&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true", 
+			src: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/480184503&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true", 
 			name: "Este es tu momento."	
 		}, 
 		{
-			src: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/485937321&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true", 
+			src: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/475809495&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true", 
 			name: "Una mala racha."		
 		},
 		{
-			src: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/480184503&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true", 
-			name: "Donde esta Dios cuando tengo dificultades."				},
+			src: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/472950204&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true", 
+			name: "Donde esta Dios cuando tengo dificultades."				
+		},
+		{
+			src: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/471358830&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true", 
+			name: "Pon tu confianza en el señor."				
+		},
+		{
+			src: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/461122575&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true", 
+			name: "Aspira a lo mejor."				
+		},
+		{
+			src: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/457565901&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true", 
+			name: "Un botín prohibido."				
+		},
 	
 	
 
@@ -93,4 +102,3 @@ VideoCard.propTypes = {
 };
 
 export default withStyles(styles, { withTheme: true })(VideoCard);
-
