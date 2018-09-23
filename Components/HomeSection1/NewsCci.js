@@ -19,7 +19,7 @@ const styles = theme => ({
   
 	},
 	media: {
-		// ⚠️ object-fit is not supported by IE11.
+
 		objectFit: "cover",
 		[theme.breakpoints.up("xl")]: {
 			height: 287,

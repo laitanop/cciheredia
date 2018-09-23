@@ -36,7 +36,7 @@ const styles = theme => ({
   
 	},
 	paperNews: {
-		padding: theme.spacing.unit * 3.5,
+		padding: theme.spacing.unit * 1.5,
 		textAlign: "center",
 	   color: theme.palette.text.secondary,
 	},

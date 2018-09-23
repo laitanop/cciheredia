@@ -7,7 +7,7 @@ import Layout from '../Components/Layout';
 import HomeSection1 from '../Components/HomeSection1/HomeSection1';
 import HomeSection3 from '../Components/HomeSection3';
 
-import HomeSection2 from '../Components/HomeSection2';
+import HomeSection2 from '../Components/HomeSection2/HomeSection2';
 
 const styles = theme => ({
   root: {
