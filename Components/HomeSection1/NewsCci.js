@@ -66,12 +66,12 @@ function NewsCci(props) {
 				/>
 				<CardContent>
 					<div className={classes.title}>
-           Mesa del señor 
+           Musica Acustica 
             
 					</div>
 					<div className={classes.text}>
-          Cada primer domingo de mes, en el Centro Cristiano Internacional de Galaad
-          participamos de la Mesa del Señor. 
+        Múscia que edifica en un ambiente amistoso con una rica tasa de chocolate caliente y breves reflexiones
+		para le alma. 
           
 					</div>
          
@@ -85,7 +85,7 @@ function NewsCci(props) {
 calendar_today
 					</i>&nbsp; &nbsp; 
 			
-     Sabado 1 de septiembre 2018
+     Sabado 8 de Octubre 2018,  de 3:00-5:00pm
           
 				</div>
 			</CardActions>

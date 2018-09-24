@@ -88,7 +88,7 @@ class Footer extends React.Component {
 				</Grid>
 				<Grid   container spacing={0}>
 					<Grid item xs={12}>
-						<div className={classes.text}>Copyright © 2018 CCI Heredia. Todos los derechos reservados.</div>
+						<div className={classes.text}>Copyright © 2018 CCI Gaalad. Todos los derechos reservados.</div>
  				</Grid>
 				</Grid>
 			</div>

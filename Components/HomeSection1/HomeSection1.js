@@ -153,7 +153,7 @@ function HomeSection1(props) {
 				<Grid item xs={12} sm={6}>
 			
 					<Paper  className={classes.paperNews} elevation={24}>
-					<div style={{backgroundColor: "#dfe9a0", marginBottom:"10px"}}>Noticias</div>
+					<div style={{backgroundColor: "#dfe9a0", marginBottom:"10px"}}>Canta al Creador</div>
 						<NewsCci />
 						
 						
