@@ -26,51 +26,50 @@ function GalleryImages(props) {
 	const { classes } = props;
 	const images = [
 		{
-			src: "../../static/Fotos/camphoto_684387517.jpg"
+			src: "../../static/Fotos/Optimized-camphoto_684387517.jpg"
 		}, 
 		{
-			src: "../../static/Fotos/IMG_1344-photo-full.jpg"
+			src: "../../static/Fotos/Optimized-IMG_1344-photo-full.jpg"
 		},
 		{
-			src: "../../static/Fotos/EB56A42F-AF4F-4371-A484-F6AE69D1BC63.JPG"
+			src: "../../static/Fotos/Optimized-EB56A42F-AF4F-4371-A484-F6AE69D1BC63.JPG"
 		}, 
 		{
-			src: "../../static/Fotos/IMG_1348.JPG"
+			src: "../../static/Fotos/Optimized-IMG_1348.JPG"
 		}, 
 		{
-			src: "../../static/Fotos/IMG_2824.jpg"
+			src: "../../static/Fotos/Optimized-IMG_2824.jpg"
 		},
 		{
-			src: "../../static/Fotos/Segundo ArcoIris-2018.jpg"
+			src: "../../static/Fotos/Optimized-Segundo ArcoIris-2018.jpg"
+		}, 
+		
+		{
+			src: "../../static/Fotos/Optimized-IMG_2908.jpg"
 		}, 
 		{
-			src: "../../static/Fotos/Segunda Celebración-02.jpg"
-		}, {
-			src: "../../static/Fotos/IMG_2908.jpg"
+			src: "../../static/Fotos/Optimized-IMG_2831.jpg"
 		}, 
 		{
-			src: "../../static/Fotos/IMG_2831.jpg"
+			src: "../../static/Fotos/Optimized-IMG_2829.jpg"
 		}, 
 		{
-			src: "../../static/Fotos/IMG_2829.jpg"
+			src: "../../static/Fotos/Optimized-IMG_2832.jpg"
 		}, 
 		{
-			src: "../../static/Fotos/IMG_2832.jpg"
+			src: "../../static/Fotos/Optimized-IMG_2833.jpg"
 		}, 
 		{
-			src: "../../static/Fotos/IMG_2833.jpg"
+			src: "../../static/Fotos/Optimized-IMG_2838.jpg"
 		}, 
 		{
-			src: "../../static/Fotos/IMG_2838.jpg"
+			src: "../../static/Fotos/Optimized-IMG_2848.jpg"
 		}, 
 		{
-			src: "../../static/Fotos/IMG_2848.jpg"
+			src: "../../static/Fotos/Optimized-IMG_2858.jpg"
 		}, 
 		{
-			src: "../../static/Fotos/IMG_2858.jpg"
-		}, 
-		{
-			src: "../../static/Fotos/IMG_2862.jpg"
+			src: "../../static/Fotos/Optimized-IMG_2862.jpg"
 		}, 
        
         

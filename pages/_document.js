@@ -11,7 +11,8 @@ class MyDocument extends Document {
 		return (
 			<html lang="en" dir="ltr">
 				<Head>
-					<title>CCI</title>
+					<title>CCI Gaalad- .</title>
+					<meta name="description" content="Una Comunidad amigable y familiar donde aprenderás amar a Dios, creer en su palabra, hacer amigos y servir a los demás"></meta>
 					<meta charSet="utf-8" />
 					{/* Use minimum-scale=1 to enable GPU rasterization */}
 					<meta
