@@ -1,35 +1,53 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
-import Grid from '@material-ui/core/Grid';
-import GalleryImages from './GalleryImages'
+import React from "react";
+import PropTypes from "prop-types";
+import { withStyles } from "@material-ui/core/styles";
+import Paper from "@material-ui/core/Paper";
+import Grid from "@material-ui/core/Grid";
+import GalleryImages from "./GalleryImages";
+import GalleryImagesResponsive from "./GalleryImagesResponsive";
 
 const styles = theme => ({
 	root: {
-    flexGrow: 1,
-    marginTop: "100px",
-    margin: "50px"
+		flexGrow: 1,
+		marginTop: "100px",
+		margin: "50px"
 	},
 	paper: {
 		padding: theme.spacing.unit * 2,
-		textAlign: 'center',
+		textAlign: "center",
 		marginTop: "100px",
    
 	},
 	Text: {
-		textAlign: 'center',
+		textAlign: "center",
 		fontSize: "60px",
 		fontWeight: "700px",
 		lineHeight: "78px", 
 		color: "#96ad32"
-  }, 
-  description: {
-		textAlign: 'center',
+	}, 
+	description: {
+		textAlign: "center",
 		fontSize: "30px",
 		fontWeight: "500px",
 		lineHeight: "78px", 
-		color: "#9E9E9E"
+		color: "#9E9E9E", 
+		[theme.breakpoints.down("sm")]: {
+			fontSize: "15px",
+			lineHeight: "28px",
+		},
+
+	}, 
+	gallery: {
+		[theme.breakpoints.down("md")]: {
+			display:"none",
+			visibility: "hidden",
+		  },
+	}, 
+	galleryResponsive: {
+		[theme.breakpoints.up("md")]: {
+			display:"none",
+			visibility: "hidden",
+		  },
 	}
 });
 
@@ -42,14 +60,22 @@ function Nosotros(props) {
 			
 				<Grid item xs={12} sm={6}>
 					<div className={classes.Text}>Somos CCI Gaalad</div>
-          <Grid item xs={12}>
-          <div className={classes.description}>Esta organización ministerial está siempre sujeta al llamamiento ministerial y disponibilidad de servidores.</div>
-				</Grid>
+					<Grid item xs={12}>
+						
+						<div className={classes.description}>Esta organización ministerial está siempre sujeta al llamamiento ministerial y disponibilidad de servidores.</div>
+						<img  src="../../static/Untitled.svg" alt="Italian Trulli" width="350" height="330" />
+
+					</Grid>
 				</Grid>
 				<Grid item xs={12} sm={6}>
-					<GalleryImages/>
+					<div className={classes.gallery}>
+						<GalleryImages/>
+					</div>
+					<div className={classes.galleryResponsive}>
+						<GalleryImagesResponsive />
+					</div>
+					
 				</Grid>
-			
 			</Grid>
 		</div>
 	);
