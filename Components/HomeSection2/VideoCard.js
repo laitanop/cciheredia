@@ -10,6 +10,11 @@ const styles = theme => ({
 		...theme.mixins.gutters(),
 		paddingTop: theme.spacing.unit * 1,
 		paddingBottom: theme.spacing.unit * 1,
+	
+	
+	  },
+	  root1: {
+	
 		"&:hover": {
 			boxShadow: "5px 5px 5px 5px #BDBDBD"
 		}	
@@ -71,7 +76,7 @@ function VideoCard(props) {
 					<div className={classes.root}>
 					
 						<div>
-							<Paper className={classes.root} elevation={10}>
+							<Paper className={classes.root1} elevation={2}>
 							
 								<Grid container spacing={0}>
 				
