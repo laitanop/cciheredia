@@ -6,13 +6,18 @@ import Grid from "@material-ui/core/Grid";
 
 const styles = theme => ({
 	root: {
-		flexGrow: 1
+		flexGrow: 1,
+		display: "flex",
+		justifyContent: "center",
+		backgroundImage: "url(../../static/contact.svg)",
+		backgroundSize: "70%",
+		backgroundRepeat: "no-repeat",
+		backgroundPosition: "center", 
+		height: "700px",
+	
+		
 	},
-	paper: {
-		padding: theme.spacing.unit * 2,
-		textAlign: "center",
-		color: theme.palette.text.secondary
-	}
+	
 });
 
 function Contacto (props) {
@@ -20,29 +25,8 @@ function Contacto (props) {
 
 	return (
 		<div className={classes.root}>
-			<Grid container spacing={24}>
-				<Grid item xs={12}>
-					<Paper className={classes.paper}>xs=12</Paper>
-				</Grid>
-				<Grid item xs={6}>
-					<Paper className={classes.paper}>xs=6</Paper>
-				</Grid>
-				<Grid item xs={6}>
-					<Paper className={classes.paper}>xs=6</Paper>
-				</Grid>
-				<Grid item xs={3}>
-					<Paper className={classes.paper}>xs=3</Paper>
-				</Grid>
-				<Grid item xs={3}>
-					<Paper className={classes.paper}>xs=3</Paper>
-				</Grid>
-				<Grid item xs={3}>
-					<Paper className={classes.paper}>xs=3</Paper>
-				</Grid>
-				<Grid item xs={3}>
-					<Paper className={classes.paper}>xs=3</Paper>
-				</Grid>
-			</Grid>
+	contacto
+		
 		</div>
 	);
 }

@@ -8,6 +8,7 @@ import Grid from "@material-ui/core/Grid";
 import VideoCard from "./VideoCard";
 import Belive from "./Belive";
 import GrowImage from "./SVGImages/GrowImage";
+import VideoCardResponsivo from "./VideoCardResponsivo";
 
 
 
@@ -54,9 +55,19 @@ const styles = theme => ({
 		overflow: "scroll",
 		
 		height: "600px",
+		[theme.breakpoints.down("md")]: {
+			display: "none",
+			visibility: "hidden"
+		}
 
 	
 	},
+	VideoCardResponsivo: {
+		[theme.breakpoints.up("md")]: {
+			display: "none",
+			visibility: "hidden"
+		}
+	}
 
 
 });
@@ -81,13 +92,17 @@ function HomeSection2(props) {
 					
 					</Grid>
 					<Grid item xs={12} sm={6}>
+		
 						<div className={classes.paper1}>Sermones </div>
 						<div className={classes.scroll}>
 							<VideoCard />
-						</div>	
+						</div>
+						<div className={classes.VideoCardResponsivo}><VideoCardResponsivo /></div>	
+						
 					</Grid>
       
 				</Grid>
+			
 			</Paper>
 		</div>
  
