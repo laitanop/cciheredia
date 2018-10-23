@@ -4,6 +4,7 @@ import { withStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
+import ContacForm from "./ContacForm";
 
 
 const styles = theme => ({
@@ -19,43 +20,59 @@ const styles = theme => ({
 	
 		
 	},
-	
+	root2: {
+		marginTop: "50px"
+	},
 	paper: {
 		padding: theme.spacing.unit * 2,
-		textAlign: 'center',
+		textAlign: "center",
+		marginTop: "10px",
+		marginRight: "20px",
+		paddingBottom: "40px",
 		color: theme.palette.text.secondary,
 	  },
 	
 });
 
-function Contacto (props) {
-	const { classes } = props;
+class Contacto extends React.Component {
+	constructor(props) {
+		super(props);
+		this.state = {};
+	  }
 
-	return (
-		<div>
-			<Grid container spacing={24}>
-			
-				<Grid item xs={6}>
-					<div className={classes.paper}>	<div className={classes.root} /></div>
-				</Grid>
-				<Grid item xs={6}>
-					<Paper className={classes.paper}>
-		  <Typography variant="headline" component="h3">
-         Contacto
-						</Typography>
-						<Typography component="p">
-ccigalaad@gmail.com				</Typography>
-						<Typography component="p">
-Tel. 71-75-10-30			</Typography></Paper>
-				</Grid>
-      
-			</Grid>
- 
+	render() {
+		const { classes } = this.props;
 	
 	
+
+		return (
 		
-		</div>
-	);
+			<div className={classes.root2}>
+				<Grid container spacing={24}>
+			
+					<Grid item xs={6}>
+						<div>	<div className={classes.root} /></div>
+					</Grid>
+					<Grid item xs={6}>
+						<Paper className={classes.paper}>
+		  <div>
+         Contacto
+							</div>
+							<div>
+ccigalaad@gmail.com				</div>
+							<div>
+Tel. 71-75-10-30			</div>
+							<ContacForm />
+						</Paper>
+					</Grid>
+      
+				</Grid>
+ 
+		
+		
+			</div>
+		);
+	}
 }
 
 Contacto.propTypes = {

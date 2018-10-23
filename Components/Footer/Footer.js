@@ -48,7 +48,7 @@ class Footer extends React.Component {
 					<Grid item xs={12}>
 						<Grid container className={classes.demo} justify="center" spacing={24} >
          
-							<Grid key={8} item>
+							<Grid  item>
 								<Tooltip title="Siguenos en Facebook" placement="top-start">
 									<Button target="_blank" variant="fab" aria-label="Add" className={classes.button} href="https://www.facebook.com/CCIGalaad/">
 										<i className="fab fa-facebook-f fa-2x"/>
@@ -56,7 +56,7 @@ class Footer extends React.Component {
 								</Tooltip>
 							
 							</Grid>
-							<Grid key={8} item>
+							<Grid  item>
 								<Tooltip title="+506 7003-8087 oficinas" placement="top-start">
 									<Button variant="fab" aria-label="Add" className={classes.button}>
 										<i className="fas fa-phone fa-2x"/>
@@ -65,7 +65,7 @@ class Footer extends React.Component {
                            
 
 							</Grid>
-							<Grid key={8} item>
+							<Grid  item>
 								<Tooltip title="Concepción de San Rafael de Heredia" placement="top-start">
 									<Button variant="fab" aria-label="Add" className={classes.button}>
 										<i className="fas fa-map-marker-alt fa-2x"/>
@@ -73,7 +73,7 @@ class Footer extends React.Component {
 								</Tooltip>
                          
 							</Grid>
-							<Grid key={8} item>
+							<Grid  item>
 								<Tooltip title="info@cciheredia.cr E-mail" placement="top-start">
 									<Button variant="fab" aria-label="Add" className={classes.button}>
 										<i className="fas fa-envelope fa-2x"/>
