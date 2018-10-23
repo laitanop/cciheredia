@@ -85,7 +85,7 @@ function VideoCard(props) {
 									</Grid>
 									<Grid item xs={4}>
 										<div style={{fontSize: "16px", textAlign: "left", marginTop: "30px"}}>{video.name}</div>
-										<div style={{color: "#BDBDBD",fontSize: "10px", textAlign: "right"}}>Pastor Rolando Soto</div>
+										<div style={{color: "#BDBDBD",fontSize: "10px", textAlign: "right", marginRight: "9px"}}>Pastor Rolando Soto</div>
 									</Grid>
      
 								</Grid>

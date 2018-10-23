@@ -9,11 +9,13 @@
     "material-design-icons": "^3.0.1",
     "next": "latest",
     "prop-types": "latest",
-    "react": "latest",
+    "react": "^16.5.2",
     "react-animate-on-scroll": "^2.1.5",
-    "react-dom": "latest",
+    "react-dom": "^16.5.2",
     "react-jss": "latest",
-    "react-swipeable-views": "^0.13.0"
+    "react-mail-form": "^1.0.1",
+    "react-swipeable-views": "^0.13.0",
+    "uninstall": "0.0.0"
   },
   "scripts": {
     "dev": "next",

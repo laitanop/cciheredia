@@ -70,8 +70,8 @@ function NewsCci(props) {
             
 					</div>
 					<div className={classes.text}>
-        Múscia que edifica en un ambiente amistoso con una rica tasa de chocolate caliente y breves reflexiones
-		para le alma. 
+        Múscia que edifica en un ambiente amistoso y breves reflexiones
+		para le alma. Ven y acompañanos!
           
 					</div>
          
@@ -85,7 +85,7 @@ function NewsCci(props) {
 calendar_today
 					</i>&nbsp; &nbsp; 
 			
-     Sabado 8 de Octubre 2018,  de 3:00-5:00pm
+     Sabado 27 de Octubre 2018,  de 3:00-5:00pm
           
 				</div>
 			</CardActions>

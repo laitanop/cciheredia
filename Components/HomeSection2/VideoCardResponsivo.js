@@ -99,7 +99,9 @@ class VideoCardResponsivo extends React.Component {
     return (
       <div className={classes.root}>
  <Paper square elevation={0} className={classes.header}>
-          <Typography>{tutorialSteps[activeStep].label}</Typography>
+          <div style={{fontSize: "16px", textAlign: "left", marginTop: "30px"}}>{tutorialSteps[activeStep].label}   <span style={{color: "#BDBDBD",fontSize: "10px", textAlign: "right", marginRight: "9px"}}> Pastor Rolando Soto</span></div>
+       
+
         </Paper>
         <SwipeableViews
           axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
