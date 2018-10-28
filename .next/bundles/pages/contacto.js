@@ -2,7 +2,7 @@ module.exports =
 
         __NEXT_REGISTER_PAGE('/contacto', function() {
           var comp = 
-      webpackJsonp([5],{
+      webpackJsonp([7],{
 
 /***/ "./Components/Contacto/ContacForm.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -25793,7 +25793,7 @@ var _default = withRoot;
 
 /***/ }),
 
-/***/ 4:
+/***/ 6:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__("./pages/contacto.js");
@@ -25801,7 +25801,7 @@ module.exports = __webpack_require__("./pages/contacto.js");
 
 /***/ })
 
-},[4])
+},[6])
           return { page: comp.default }
         })
       ;
