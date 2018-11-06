@@ -25,7 +25,7 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "node server.js",
+    "start": "next",
     "heroku-postbuild": "next build"
   },
   "devDependencies": {
