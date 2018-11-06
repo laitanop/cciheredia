@@ -29,13 +29,26 @@ class ContactForm extends React.Component {
         this.state = {
             name: '',
             email: '',
-            message: ''
+            message: '',
+            submitting: false,
+            submitted: false
+
         }
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
       }
-
-
+      submitForm (data) {
+        fetch('/api/contact', {
+          method: 'post',
+          headers: {
+            'Accept': 'application/json, text/plain, */*',
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(data)
+        }).then((res) => {
+          res.status === 200 ? this.setState({ submitted: true }) : ''
+        })
+      }
   handleChange = e => {
     this.setState({[e.target.name]: e.target.value });
     
@@ -59,8 +72,10 @@ async handleSubmit(e) {
     return (
         <div>
 
-
-            <form className={classes.container} noValidate autoComplete="off" onSubmit={this.handleSubmit}>
+ <form action="/send-email" method="post" className={classes.container} noValidate autoComplete="off" onSubmit={e => {
+                    e.preventDefault()
+                    validateForm() && this.submitForm(getPayload())
+                  }}>
         <TextField
           id="filled-name"
           label="Nombre"
@@ -98,7 +113,8 @@ async handleSubmit(e) {
 
 </div>
 
-      </form>
+      </form>  
+     
  
         </div>
       

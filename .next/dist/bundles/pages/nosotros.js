@@ -67,408 +67,10 @@ module.exports =
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
-
-/***/ "./Components/Contacto/ContacForm.js":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_runtime_regenerator__ = __webpack_require__("@babel/runtime/regenerator");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_regenerator__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__("react");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types__ = __webpack_require__("prop-types");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__material_ui_core_Button__ = __webpack_require__("@material-ui/core/Button");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__material_ui_core_Button___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__material_ui_core_Button__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__material_ui_core_styles__ = __webpack_require__("@material-ui/core/styles");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__material_ui_core_styles___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__material_ui_core_styles__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__material_ui_core_TextField__ = __webpack_require__("@material-ui/core/TextField");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__material_ui_core_TextField___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__material_ui_core_TextField__);
-
-var _jsxFileName = "/Users/pamelarivera/MisDocumentos/cci/cciheredia/Components/Contacto/ContacForm.js";
-
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } } function _next(value) { step("next", value); } function _throw(err) { step("throw", err); } _next(); }); }; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-
-
-
-
- // import axios from 'axios';
-
-var styles = function styles(theme) {
-  return {
-    container: {},
-    textField: {
-      marginLeft: theme.spacing.unit,
-      marginRight: theme.spacing.unit
-    },
-    button: {
-      margin: theme.spacing.unit,
-      backgroundColor: "#6A772A"
-    }
-  };
-};
-
-var ContactForm =
-/*#__PURE__*/
-function (_React$Component) {
-  _inherits(ContactForm, _React$Component);
-
-  function ContactForm(props) {
-    var _this;
-
-    _classCallCheck(this, ContactForm);
-
-    _this = _possibleConstructorReturn(this, (ContactForm.__proto__ || Object.getPrototypeOf(ContactForm)).call(this, props));
-    Object.defineProperty(_assertThisInitialized(_this), "handleChange", {
-      configurable: true,
-      enumerable: true,
-      writable: true,
-      value: function value(e) {
-        _this.setState(_defineProperty({}, e.target.name, e.target.value));
-      }
-    });
-    _this.state = {
-      name: '',
-      email: '',
-      message: '',
-      submitting: false,
-      submitted: false
-    };
-    _this.handleChange = _this.handleChange.bind(_assertThisInitialized(_this));
-    _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
-    return _this;
-  }
-
-  _createClass(ContactForm, [{
-    key: "submitForm",
-    value: function submitForm(data) {
-      var _this2 = this;
-
-      fetch('/api/contact', {
-        method: 'post',
-        headers: {
-          'Accept': 'application/json, text/plain, */*',
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
-      }).then(function (res) {
-        res.status === 200 ? _this2.setState({
-          submitted: true
-        }) : '';
-      });
-    }
-  }, {
-    key: "handleSubmit",
-    value: function () {
-      var _handleSubmit = _asyncToGenerator(
-      /*#__PURE__*/
-      __WEBPACK_IMPORTED_MODULE_0__babel_runtime_regenerator___default.a.mark(function _callee(e) {
-        var _state, name, email, message, form;
-
-        return __WEBPACK_IMPORTED_MODULE_0__babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
-          while (1) {
-            switch (_context.prev = _context.next) {
-              case 0:
-                e.preventDefault();
-                _state = this.state, name = _state.name, email = _state.email, message = _state.message;
-                _context.next = 4;
-                return axios.post('/api/form', {
-                  name: name,
-                  email: email,
-                  message: message
-                });
-
-              case 4:
-                form = _context.sent;
-                console.log(name, email, message);
-
-              case 6:
-              case "end":
-                return _context.stop();
-            }
-          }
-        }, _callee, this);
-      }));
-
-      return function handleSubmit(_x) {
-        return _handleSubmit.apply(this, arguments);
-      };
-    }()
-  }, {
-    key: "render",
-    value: function render() {
-      var _this3 = this;
-
-      var classes = this.props.classes;
-      return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("div", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 73
-        }
-      }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("form", {
-        action: "/send-email",
-        method: "post",
-        className: classes.container,
-        noValidate: true,
-        autoComplete: "off",
-        onSubmit: function onSubmit(e) {
-          e.preventDefault();
-          validateForm() && _this3.submitForm(getPayload());
-        },
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 75
-        }
-      }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__material_ui_core_TextField___default.a, {
-        id: "filled-name",
-        label: "Nombre",
-        className: classes.textField,
-        name: "name",
-        onChange: this.handleChange,
-        margin: "normal",
-        variant: "filled",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 79
-        }
-      }), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__material_ui_core_TextField___default.a, {
-        id: "filled-email",
-        label: "Correo",
-        className: classes.textField,
-        name: "email",
-        onChange: this.handleChange,
-        margin: "normal",
-        variant: "filled",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 91
-        }
-      }), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("div", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 102
-        }
-      }, " ", __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("textarea", {
-        name: "message",
-        onChange: this.handleChange,
-        rows: "10",
-        cols: "55",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 102
-        }
-      })), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("div", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 108
-        }
-      }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__material_ui_core_Button___default.a, {
-        onClick: this.handleSubmit,
-        variant: "contained",
-        color: "primary",
-        className: classes.button,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 109
-        }
-      }, "Enviar"))));
-    }
-  }]);
-
-  return ContactForm;
-}(__WEBPACK_IMPORTED_MODULE_1_react___default.a.Component);
-
-ContactForm.propTypes = {
-  classes: __WEBPACK_IMPORTED_MODULE_2_prop_types___default.a.object.isRequired
-};
-/* harmony default export */ __webpack_exports__["a"] = (Object(__WEBPACK_IMPORTED_MODULE_4__material_ui_core_styles__["withStyles"])(styles)(ContactForm));
-
-/***/ }),
-
-/***/ "./Components/Contacto/Contacto.js":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("react");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__("prop-types");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__material_ui_core_styles__ = __webpack_require__("@material-ui/core/styles");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__material_ui_core_styles___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__material_ui_core_styles__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__material_ui_core_Paper__ = __webpack_require__("@material-ui/core/Paper");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__material_ui_core_Paper___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__material_ui_core_Paper__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__material_ui_core_Grid__ = __webpack_require__("@material-ui/core/Grid");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__material_ui_core_Grid___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__material_ui_core_Grid__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__material_ui_core_Typography__ = __webpack_require__("@material-ui/core/Typography");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__material_ui_core_Typography___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__material_ui_core_Typography__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ContacForm__ = __webpack_require__("./Components/Contacto/ContacForm.js");
-var _jsxFileName = "/Users/pamelarivera/MisDocumentos/cci/cciheredia/Components/Contacto/Contacto.js";
-
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-
-
-
-
-
-
-
-
-var styles = function styles(theme) {
-  return {
-    root: {
-      flexGrow: 1,
-      display: "flex",
-      justifyContent: "center",
-      backgroundImage: "url(../../../../static/Fotos/contactImg.svg)",
-      backgroundSize: "cover",
-      backgroundRepeat: "no-repeat",
-      backgroundPosition: "center",
-      height: "500px"
-    },
-    root2: {
-      marginTop: "50px"
-    },
-    paper: {
-      padding: theme.spacing.unit * 2,
-      textAlign: "center",
-      marginTop: "10px",
-      marginRight: "20px",
-      paddingBottom: "40px",
-      color: theme.palette.text.secondary
-    }
-  };
-};
-
-var Contacto =
-/*#__PURE__*/
-function (_React$Component) {
-  _inherits(Contacto, _React$Component);
-
-  function Contacto(props) {
-    var _this;
-
-    _classCallCheck(this, Contacto);
-
-    _this = _possibleConstructorReturn(this, (Contacto.__proto__ || Object.getPrototypeOf(Contacto)).call(this, props));
-    _this.state = {};
-    return _this;
-  }
-
-  _createClass(Contacto, [{
-    key: "render",
-    value: function render() {
-      var classes = this.props.classes;
-      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
-        className: classes.root2,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 50
-        }
-      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__material_ui_core_Grid___default.a, {
-        container: true,
-        spacing: 24,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 51
-        }
-      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__material_ui_core_Grid___default.a, {
-        item: true,
-        xs: 6,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 53
-        }
-      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 54
-        }
-      }, " ", __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
-        className: classes.root,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 54
-        }
-      }))), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__material_ui_core_Grid___default.a, {
-        item: true,
-        xs: 6,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 56
-        }
-      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__material_ui_core_Paper___default.a, {
-        className: classes.paper,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 57
-        }
-      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 58
-        }
-      }, "Contacto"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 61
-        }
-      }, "ccigalaad@gmail.com    "), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 63
-        }
-      }, "Tel. 71-75-10-30   "), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__ContacForm__["a" /* default */], {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 65
-        }
-      })))));
-    }
-  }]);
-
-  return Contacto;
-}(__WEBPACK_IMPORTED_MODULE_0_react___default.a.Component);
-
-Contacto.propTypes = {
-  classes: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.object.isRequired
-};
-/* harmony default export */ __webpack_exports__["a"] = (Object(__WEBPACK_IMPORTED_MODULE_2__material_ui_core_styles__["withStyles"])(styles)(Contacto));
-
-/***/ }),
 
 /***/ "./Components/Footer/Footer.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -1248,7 +850,791 @@ ResponsiveNavigation.propTypes = {
 
 /***/ }),
 
-/***/ "./pages/contacto.js":
+/***/ "./Components/Nosotros/GalleryImages.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("react");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__("prop-types");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__material_ui_core_styles__ = __webpack_require__("@material-ui/core/styles");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__material_ui_core_styles___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__material_ui_core_styles__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__material_ui_core_Paper__ = __webpack_require__("@material-ui/core/Paper");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__material_ui_core_Paper___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__material_ui_core_Paper__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__material_ui_core_Grid__ = __webpack_require__("@material-ui/core/Grid");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__material_ui_core_Grid___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__material_ui_core_Grid__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ShowModal__ = __webpack_require__("./Components/Nosotros/ShowModal.js");
+var _jsxFileName = "/Users/pamelarivera/MisDocumentos/cci/cciheredia/Components/Nosotros/GalleryImages.js";
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+
+
+
+
+
+
+
+var styles = function styles(theme) {
+  return {
+    root: {
+      flexGrow: 1
+    },
+    paper: {
+      padding: theme.spacing.unit * 1,
+      textAlign: "center",
+      borderRadius: "5px",
+      "&:hover": {
+        boxShadow: "5px 5px 5px 5px #BDBDBD"
+      }
+    }
+  };
+};
+
+var images = [{
+  src: "../../static/Fotos/Optimized-camphoto_684387517.jpg"
+}, {
+  src: "../../static/Fotos/Optimized-IMG_1344-photo-full.jpg"
+}, {
+  src: "../../static/Fotos/Optimized-EB56A42F-AF4F-4371-A484-F6AE69D1BC63.JPG"
+}, {
+  src: "../../static/Fotos/Optimized-IMG_1348.JPG"
+}, {
+  src: "../../static/Fotos/Optimized-IMG_2824.jpg"
+}, {
+  src: "../../static/Fotos/Optimized-Segundo ArcoIris-2018.jpg"
+}, {
+  src: "../../static/Fotos/Optimized-IMG_2908.jpg"
+}, {
+  src: "../../static/Fotos/Optimized-IMG_2831.jpg"
+}, {
+  src: "../../static/Fotos/Optimized-IMG_2829.jpg"
+}, {
+  src: "../../static/Fotos/Optimized-IMG_2832.jpg"
+}, {
+  src: "../../static/Fotos/Optimized-IMG_2833.jpg"
+}, {
+  src: "../../static/Fotos/Optimized-IMG_2838.jpg"
+}, {
+  src: "../../static/Fotos/Optimized-IMG_2848.jpg"
+}, {
+  src: "../../static/Fotos/Optimized-IMG_2858.jpg"
+}, {
+  src: "../../static/Fotos/Optimized-IMG_2862.jpg"
+}];
+
+var GalleryImages =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(GalleryImages, _React$Component);
+
+  function GalleryImages() {
+    var _ref;
+
+    var _temp, _this;
+
+    _classCallCheck(this, GalleryImages);
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return _possibleConstructorReturn(_this, (_temp = _this = _possibleConstructorReturn(this, (_ref = GalleryImages.__proto__ || Object.getPrototypeOf(GalleryImages)).call.apply(_ref, [this].concat(args))), Object.defineProperty(_assertThisInitialized(_this), "state", {
+      configurable: true,
+      enumerable: true,
+      writable: true,
+      value: {
+        open: false,
+        scroll: 'paper'
+      }
+    }), Object.defineProperty(_assertThisInitialized(_this), "handleClickOpen", {
+      configurable: true,
+      enumerable: true,
+      writable: true,
+      value: function value(scroll) {
+        return function () {
+          _this.setState({
+            open: true,
+            scroll: scroll
+          });
+        };
+      }
+    }), Object.defineProperty(_assertThisInitialized(_this), "handleClose", {
+      configurable: true,
+      enumerable: true,
+      writable: true,
+      value: function value() {
+        _this.setState({
+          open: false
+        });
+      }
+    }), _temp));
+  }
+
+  _createClass(GalleryImages, [{
+    key: "render",
+    value: function render() {
+      var _this2 = this;
+
+      var classes = this.props.classes;
+      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+        className: classes.root,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 97
+        }
+      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__material_ui_core_Grid___default.a, {
+        container: true,
+        spacing: 24,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 98
+        }
+      }, images.map(function (img) {
+        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__material_ui_core_Grid___default.a, {
+          item: true,
+          xs: 12,
+          sm: 4,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 101
+          }
+        }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__material_ui_core_Paper___default.a, {
+          className: classes.paper,
+          onClick: _this2.handleClickOpen('paper'),
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 103
+          }
+        }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__ShowModal__["a" /* default */], {
+          img: img.src,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 103
+          }
+        })));
+      })));
+    }
+  }]);
+
+  return GalleryImages;
+}(__WEBPACK_IMPORTED_MODULE_0_react___default.a.Component);
+
+GalleryImages.propTypes = {
+  classes: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.object.isRequired
+};
+/* harmony default export */ __webpack_exports__["a"] = (Object(__WEBPACK_IMPORTED_MODULE_2__material_ui_core_styles__["withStyles"])(styles)(GalleryImages));
+
+/***/ }),
+
+/***/ "./Components/Nosotros/GalleryImagesResponsive.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("react");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__("prop-types");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__material_ui_core_styles__ = __webpack_require__("@material-ui/core/styles");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__material_ui_core_styles___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__material_ui_core_styles__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__material_ui_core_MobileStepper__ = __webpack_require__("@material-ui/core/MobileStepper");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__material_ui_core_MobileStepper___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__material_ui_core_MobileStepper__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__material_ui_core_Paper__ = __webpack_require__("@material-ui/core/Paper");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__material_ui_core_Paper___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__material_ui_core_Paper__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__material_ui_core_Typography__ = __webpack_require__("@material-ui/core/Typography");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__material_ui_core_Typography___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__material_ui_core_Typography__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__material_ui_core_Button__ = __webpack_require__("@material-ui/core/Button");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__material_ui_core_Button___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6__material_ui_core_Button__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_react_swipeable_views__ = __webpack_require__("react-swipeable-views");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_react_swipeable_views___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_react_swipeable_views__);
+var _jsxFileName = "/Users/pamelarivera/MisDocumentos/cci/cciheredia/Components/Nosotros/GalleryImagesResponsive.js";
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+
+
+
+
+
+
+
+
+var tutorialSteps = [{
+  imgPath: '../../static/Fotos/Optimized-camphoto_684387517.jpg'
+}, {
+  imgPath: '../../static/Fotos/Optimized-IMG_1344-photo-full.jpg'
+}, {
+  imgPath: '../../static/Fotos/Optimized-EB56A42F-AF4F-4371-A484-F6AE69D1BC63.JPG'
+}, {
+  imgPath: '../../static/Fotos/Optimized-IMG_1348.JPG'
+}, {
+  imgPath: '../../static/Fotos/Optimized-IMG_2824.jpg'
+}, {
+  imgPath: '../../static/Fotos/Optimized-IMG_2833.jpg'
+}, {
+  imgPath: '../../static/Fotos/Optimized-IMG_2838.jpg'
+}, {
+  imgPath: '../../static/Fotos/Optimized-IMG_2848.jpg'
+}, {
+  imgPath: '../../static/Fotos/Optimized-IMG_2858.jpg'
+}, {
+  imgPath: '../../static/Fotos/Optimized-IMG_2862.jpg'
+}];
+
+var styles = function styles(theme) {
+  return {
+    root: {
+      maxWidth: 400,
+      flexGrow: 1
+    },
+    header: {
+      display: 'flex',
+      alignItems: 'center',
+      height: 50,
+      paddingLeft: theme.spacing.unit * 4,
+      marginBottom: 20,
+      backgroundColor: theme.palette.background.default
+    },
+    img: {
+      height: 200,
+      maxWidth: 400,
+      overflow: 'hidden',
+      width: '100%'
+    }
+  };
+};
+
+var SwipeableTextMobileStepper =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(SwipeableTextMobileStepper, _React$Component);
+
+  function SwipeableTextMobileStepper() {
+    var _ref;
+
+    var _temp, _this;
+
+    _classCallCheck(this, SwipeableTextMobileStepper);
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return _possibleConstructorReturn(_this, (_temp = _this = _possibleConstructorReturn(this, (_ref = SwipeableTextMobileStepper.__proto__ || Object.getPrototypeOf(SwipeableTextMobileStepper)).call.apply(_ref, [this].concat(args))), Object.defineProperty(_assertThisInitialized(_this), "state", {
+      configurable: true,
+      enumerable: true,
+      writable: true,
+      value: {
+        activeStep: 0
+      }
+    }), Object.defineProperty(_assertThisInitialized(_this), "handleNext", {
+      configurable: true,
+      enumerable: true,
+      writable: true,
+      value: function value() {
+        _this.setState(function (prevState) {
+          return {
+            activeStep: prevState.activeStep + 1
+          };
+        });
+      }
+    }), Object.defineProperty(_assertThisInitialized(_this), "handleBack", {
+      configurable: true,
+      enumerable: true,
+      writable: true,
+      value: function value() {
+        _this.setState(function (prevState) {
+          return {
+            activeStep: prevState.activeStep - 1
+          };
+        });
+      }
+    }), Object.defineProperty(_assertThisInitialized(_this), "handleStepChange", {
+      configurable: true,
+      enumerable: true,
+      writable: true,
+      value: function value(activeStep) {
+        _this.setState({
+          activeStep: activeStep
+        });
+      }
+    }), _temp));
+  }
+
+  _createClass(SwipeableTextMobileStepper, [{
+    key: "render",
+    value: function render() {
+      var _props = this.props,
+          classes = _props.classes,
+          theme = _props.theme;
+      var activeStep = this.state.activeStep;
+      var maxSteps = tutorialSteps.length;
+      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+        className: classes.root,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 93
+        }
+      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7_react_swipeable_views___default.a, {
+        axis: theme.direction === 'rtl' ? 'x-reverse' : 'x',
+        index: this.state.activeStep,
+        onChangeIndex: this.handleStepChange,
+        enableMouseEvents: true,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 95
+        }
+      }, tutorialSteps.map(function (step) {
+        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
+          key: step.label,
+          className: classes.img,
+          src: step.imgPath,
+          alt: step.label,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 102
+          }
+        });
+      })), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__material_ui_core_MobileStepper___default.a, {
+        steps: 5,
+        position: "static",
+        activeStep: activeStep,
+        className: classes.mobileStepper,
+        nextButton: __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__material_ui_core_Button___default.a, {
+          size: "small",
+          onClick: this.handleNext,
+          disabled: activeStep === maxSteps - 1,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 116
+          }
+        }, "Next", theme.direction === 'rtl' ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i", {
+          className: "fas fa-chevron-left",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 123
+          }
+        }) : __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i", {
+          className: "fas fa-chevron-right",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 124
+          }
+        })),
+        backButton: __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__material_ui_core_Button___default.a, {
+          size: "small",
+          onClick: this.handleBack,
+          disabled: activeStep === 0,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 128
+          }
+        }, theme.direction === 'rtl' ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i", {
+          className: "fas fa-chevron-right",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 134
+          }
+        }) : __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i", {
+          className: "fas fa-chevron-left",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 135
+          }
+        }), "Back"),
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 110
+        }
+      }));
+    }
+  }]);
+
+  return SwipeableTextMobileStepper;
+}(__WEBPACK_IMPORTED_MODULE_0_react___default.a.Component);
+
+SwipeableTextMobileStepper.propTypes = {
+  classes: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.object.isRequired,
+  theme: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.object.isRequired
+};
+/* harmony default export */ __webpack_exports__["a"] = (Object(__WEBPACK_IMPORTED_MODULE_2__material_ui_core_styles__["withStyles"])(styles, {
+  withTheme: true
+})(SwipeableTextMobileStepper));
+
+/***/ }),
+
+/***/ "./Components/Nosotros/Nosotros.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("react");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__("prop-types");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__material_ui_core_styles__ = __webpack_require__("@material-ui/core/styles");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__material_ui_core_styles___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__material_ui_core_styles__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__material_ui_core_Paper__ = __webpack_require__("@material-ui/core/Paper");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__material_ui_core_Paper___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__material_ui_core_Paper__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__material_ui_core_Grid__ = __webpack_require__("@material-ui/core/Grid");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__material_ui_core_Grid___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__material_ui_core_Grid__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__GalleryImages__ = __webpack_require__("./Components/Nosotros/GalleryImages.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__GalleryImagesResponsive__ = __webpack_require__("./Components/Nosotros/GalleryImagesResponsive.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ShowModal__ = __webpack_require__("./Components/Nosotros/ShowModal.js");
+var _jsxFileName = "/Users/pamelarivera/MisDocumentos/cci/cciheredia/Components/Nosotros/Nosotros.js";
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+
+
+
+
+
+
+var styles = function styles(theme) {
+  return {
+    root: {
+      flexGrow: 1,
+      marginTop: "100px",
+      margin: "50px"
+    },
+    paper: {
+      padding: theme.spacing.unit * 2,
+      textAlign: "center",
+      marginTop: "100px"
+    },
+    Text: {
+      textAlign: "center",
+      fontSize: "60px",
+      fontWeight: "700px",
+      lineHeight: "78px",
+      color: "#96ad32"
+    },
+    description: _defineProperty({
+      textAlign: "center",
+      fontSize: "30px",
+      fontWeight: "500px",
+      lineHeight: "78px",
+      color: "#9E9E9E"
+    }, theme.breakpoints.down("sm"), {
+      fontSize: "15px",
+      lineHeight: "28px"
+    }),
+    gallery: _defineProperty({}, theme.breakpoints.down("md"), {
+      display: "none",
+      visibility: "hidden"
+    }),
+    galleryResponsive: _defineProperty({}, theme.breakpoints.up("md"), {
+      display: "none",
+      visibility: "hidden"
+    })
+  };
+};
+
+function Nosotros(props) {
+  var classes = props.classes;
+  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+    className: classes.root,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 57
+    }
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__material_ui_core_Grid___default.a, {
+    container: true,
+    spacing: 24,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 58
+    }
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__material_ui_core_Grid___default.a, {
+    item: true,
+    xs: 12,
+    sm: 6,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 60
+    }
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+    className: classes.Text,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 61
+    }
+  }, "Somos CCI Gaalad"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__material_ui_core_Grid___default.a, {
+    item: true,
+    xs: 12,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 62
+    }
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+    className: classes.description,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 64
+    }
+  }, "Esta organizaci\xF3n ministerial est\xE1 siempre sujeta al llamamiento ministerial y disponibilidad de servidores."), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+    className: classes.gallery,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 67
+    }
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
+    src: "../../static/Fotos/tree.svg",
+    alt: "tree",
+    width: "500",
+    height: "500",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 68
+    }
+  })), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+    className: classes.galleryResponsive,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 75
+    }
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
+    src: "../../static/Fotos/tree.svg",
+    alt: "tree",
+    width: "200",
+    height: "200",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 76
+    }
+  })))), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__material_ui_core_Grid___default.a, {
+    item: true,
+    xs: 12,
+    sm: 6,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 85
+    }
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+    className: classes.gallery,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 86
+    }
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__GalleryImages__["a" /* default */], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 87
+    }
+  })), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+    className: classes.galleryResponsive,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 90
+    }
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__GalleryImagesResponsive__["a" /* default */], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 91
+    }
+  })))));
+}
+
+Nosotros.propTypes = {
+  classes: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.object.isRequired
+};
+/* harmony default export */ __webpack_exports__["a"] = (Object(__WEBPACK_IMPORTED_MODULE_2__material_ui_core_styles__["withStyles"])(styles)(Nosotros));
+
+/***/ }),
+
+/***/ "./Components/Nosotros/ShowModal.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("react");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__material_ui_core_Button__ = __webpack_require__("@material-ui/core/Button");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__material_ui_core_Button___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__material_ui_core_Button__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__material_ui_core_Dialog__ = __webpack_require__("@material-ui/core/Dialog");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__material_ui_core_Dialog___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__material_ui_core_Dialog__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__material_ui_core_DialogActions__ = __webpack_require__("@material-ui/core/DialogActions");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__material_ui_core_DialogActions___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__material_ui_core_DialogActions__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__material_ui_core_DialogContent__ = __webpack_require__("@material-ui/core/DialogContent");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__material_ui_core_DialogContent___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__material_ui_core_DialogContent__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__material_ui_core_DialogContentText__ = __webpack_require__("@material-ui/core/DialogContentText");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__material_ui_core_DialogContentText___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__material_ui_core_DialogContentText__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__material_ui_core_DialogTitle__ = __webpack_require__("@material-ui/core/DialogTitle");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__material_ui_core_DialogTitle___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6__material_ui_core_DialogTitle__);
+var _jsxFileName = "/Users/pamelarivera/MisDocumentos/cci/cciheredia/Components/Nosotros/ShowModal.js";
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+
+
+
+
+
+
+
+
+var ShowModal =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(ShowModal, _React$Component);
+
+  function ShowModal() {
+    var _ref;
+
+    var _temp, _this;
+
+    _classCallCheck(this, ShowModal);
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return _possibleConstructorReturn(_this, (_temp = _this = _possibleConstructorReturn(this, (_ref = ShowModal.__proto__ || Object.getPrototypeOf(ShowModal)).call.apply(_ref, [this].concat(args))), Object.defineProperty(_assertThisInitialized(_this), "state", {
+      configurable: true,
+      enumerable: true,
+      writable: true,
+      value: {
+        open: false,
+        scroll: 'paper'
+      }
+    }), Object.defineProperty(_assertThisInitialized(_this), "handleClickOpen", {
+      configurable: true,
+      enumerable: true,
+      writable: true,
+      value: function value(scroll) {
+        return function () {
+          _this.setState({
+            open: true,
+            scroll: scroll
+          });
+        };
+      }
+    }), Object.defineProperty(_assertThisInitialized(_this), "handleClose", {
+      configurable: true,
+      enumerable: true,
+      writable: true,
+      value: function value() {
+        _this.setState({
+          open: false
+        });
+      }
+    }), _temp));
+  }
+
+  _createClass(ShowModal, [{
+    key: "render",
+    value: function render() {
+      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 25
+        }
+      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__material_ui_core_Button___default.a, {
+        onClick: this.handleClickOpen('paper'),
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 26
+        }
+      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
+        src: this.props.img,
+        alt: "Italian Trulli",
+        width: "150",
+        height: "130",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 26
+        }
+      })), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__material_ui_core_Dialog___default.a, {
+        open: this.state.open,
+        onClose: this.handleClose,
+        scroll: this.state.scroll,
+        "aria-labelledby": "scroll-dialog-title",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 28
+        }
+      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__material_ui_core_DialogContent___default.a, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 35
+        }
+      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__material_ui_core_DialogContentText___default.a, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 36
+        }
+      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
+        src: this.props.img,
+        alt: "Italian Trulli",
+        width: "550",
+        height: "500",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 37
+        }
+      }))), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__material_ui_core_DialogActions___default.a, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 40
+        }
+      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__material_ui_core_Button___default.a, {
+        onClick: this.handleClose,
+        color: "primary",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 41
+        }
+      }, "Cerrar"))));
+    }
+  }]);
+
+  return ShowModal;
+}(__WEBPACK_IMPORTED_MODULE_0_react___default.a.Component);
+
+/* harmony default export */ __webpack_exports__["a"] = (ShowModal);
+
+/***/ }),
+
+/***/ "./pages/nosotros.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1261,8 +1647,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__material_ui_core_styles___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__material_ui_core_styles__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__src_withRoot__ = __webpack_require__("./src/withRoot.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Components_Layout__ = __webpack_require__("./Components/Layout.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Components_Contacto_Contacto__ = __webpack_require__("./Components/Contacto/Contacto.js");
-var _jsxFileName = "/Users/pamelarivera/MisDocumentos/cci/cciheredia/pages/contacto.js";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Components_Nosotros_Nosotros__ = __webpack_require__("./Components/Nosotros/Nosotros.js");
+var _jsxFileName = "/Users/pamelarivera/MisDocumentos/cci/cciheredia/pages/nosotros.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -1294,41 +1680,41 @@ var styles = function styles(theme) {
   };
 };
 
-var Contact =
+var AboutUs =
 /*#__PURE__*/
 function (_React$Component) {
-  _inherits(Contact, _React$Component);
+  _inherits(AboutUs, _React$Component);
 
-  function Contact() {
-    _classCallCheck(this, Contact);
+  function AboutUs() {
+    _classCallCheck(this, AboutUs);
 
-    return _possibleConstructorReturn(this, (Contact.__proto__ || Object.getPrototypeOf(Contact)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (AboutUs.__proto__ || Object.getPrototypeOf(AboutUs)).apply(this, arguments));
   }
 
-  _createClass(Contact, [{
+  _createClass(AboutUs, [{
     key: "render",
     value: function render() {
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__Components_Layout__["a" /* default */], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 25
+          lineNumber: 24
         }
-      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__Components_Contacto_Contacto__["a" /* default */], {
+      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__Components_Nosotros_Nosotros__["a" /* default */], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 26
+          lineNumber: 25
         }
       }));
     }
   }]);
 
-  return Contact;
+  return AboutUs;
 }(__WEBPACK_IMPORTED_MODULE_0_react___default.a.Component);
 
-Contact.propTypes = {
+AboutUs.propTypes = {
   classes: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.object.isRequired
 };
-/* harmony default export */ __webpack_exports__["default"] = (Object(__WEBPACK_IMPORTED_MODULE_3__src_withRoot__["a" /* default */])(Object(__WEBPACK_IMPORTED_MODULE_2__material_ui_core_styles__["withStyles"])(styles)(Contact)));
+/* harmony default export */ __webpack_exports__["default"] = (Object(__WEBPACK_IMPORTED_MODULE_3__src_withRoot__["a" /* default */])(Object(__WEBPACK_IMPORTED_MODULE_2__material_ui_core_styles__["withStyles"])(styles)(AboutUs)));
 
 /***/ }),
 
@@ -1512,18 +1898,11 @@ function withRoot(Component) {
 
 /***/ }),
 
-/***/ 3:
+/***/ 5:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__("./pages/contacto.js");
+module.exports = __webpack_require__("./pages/nosotros.js");
 
-
-/***/ }),
-
-/***/ "@babel/runtime/regenerator":
-/***/ (function(module, exports) {
-
-module.exports = require("@babel/runtime/regenerator");
 
 /***/ }),
 
@@ -1545,6 +1924,41 @@ module.exports = require("@material-ui/core/Button");
 /***/ (function(module, exports) {
 
 module.exports = require("@material-ui/core/CssBaseline");
+
+/***/ }),
+
+/***/ "@material-ui/core/Dialog":
+/***/ (function(module, exports) {
+
+module.exports = require("@material-ui/core/Dialog");
+
+/***/ }),
+
+/***/ "@material-ui/core/DialogActions":
+/***/ (function(module, exports) {
+
+module.exports = require("@material-ui/core/DialogActions");
+
+/***/ }),
+
+/***/ "@material-ui/core/DialogContent":
+/***/ (function(module, exports) {
+
+module.exports = require("@material-ui/core/DialogContent");
+
+/***/ }),
+
+/***/ "@material-ui/core/DialogContentText":
+/***/ (function(module, exports) {
+
+module.exports = require("@material-ui/core/DialogContentText");
+
+/***/ }),
+
+/***/ "@material-ui/core/DialogTitle":
+/***/ (function(module, exports) {
+
+module.exports = require("@material-ui/core/DialogTitle");
 
 /***/ }),
 
@@ -1604,17 +2018,17 @@ module.exports = require("@material-ui/core/ListItemText");
 
 /***/ }),
 
+/***/ "@material-ui/core/MobileStepper":
+/***/ (function(module, exports) {
+
+module.exports = require("@material-ui/core/MobileStepper");
+
+/***/ }),
+
 /***/ "@material-ui/core/Paper":
 /***/ (function(module, exports) {
 
 module.exports = require("@material-ui/core/Paper");
-
-/***/ }),
-
-/***/ "@material-ui/core/TextField":
-/***/ (function(module, exports) {
-
-module.exports = require("@material-ui/core/TextField");
 
 /***/ }),
 
@@ -1679,7 +2093,14 @@ module.exports = require("prop-types");
 
 module.exports = require("react");
 
+/***/ }),
+
+/***/ "react-swipeable-views":
+/***/ (function(module, exports) {
+
+module.exports = require("react-swipeable-views");
+
 /***/ })
 
 /******/ });
-//# sourceMappingURL=contacto.js.map
+//# sourceMappingURL=nosotros.js.map
